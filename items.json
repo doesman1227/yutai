@@ -25,6 +25,66 @@
   ],
   "items": [
     {
+      "code": "264A",
+      "name": "Schoo",
+      "cat": "食事券・サービス券",
+      "value": 980,
+      "cond": "",
+      "fix": [
+        "9月"
+      ],
+      "arrive": [
+        "12月"
+      ],
+      "note": "自社サービス1ヶ月分",
+      "url": "https://www.kabuyutai.com/kobetu/schoo.html"
+    },
+    {
+      "code": "299A",
+      "name": "クラシル",
+      "cat": "食事券・サービス券",
+      "value": 5760,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "自社サービス無料券",
+      "url": "https://www.kabuyutai.com/kobetu/kurashiru.html"
+    },
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "cat": "QUOカード",
+      "value": 1000,
+      "cond": "",
+      "fix": [
+        "9月"
+      ],
+      "arrive": [
+        "12月"
+      ],
+      "note": "",
+      "url": "https://www.kabuyutai.com/kobetu/toranvia.html"
+    },
+    {
+      "code": "559A",
+      "name": "梅乃宿酒造",
+      "cat": "自社製品",
+      "value": 1000,
+      "cond": "",
+      "fix": [
+        "6月"
+      ],
+      "arrive": [
+        "9月"
+      ],
+      "note": "自社商品券",
+      "url": "https://www.kabuyutai.com/kobetu/umenoyado.html"
+    },
+    {
       "code": "1301",
       "name": "極洋",
       "cat": "自社製品",
@@ -240,6 +300,38 @@
       "url": "https://www.kabuyutai.com/kobetu/edion.html"
     },
     {
+      "code": "2735",
+      "name": "ワッツ",
+      "cat": "自社製品",
+      "value": 1500,
+      "cond": "",
+      "fix": [
+        "8月"
+      ],
+      "arrive": [
+        "11月"
+      ],
+      "note": "防災グッズ",
+      "url": "https://www.kabuyutai.com/kobetu/watts-jp.html"
+    },
+    {
+      "code": "2752",
+      "name": "フジオフードグループ本社",
+      "cat": "その他",
+      "value": 3000,
+      "cond": "",
+      "fix": [
+        "6月",
+        "12月"
+      ],
+      "arrive": [
+        "9月",
+        "12月"
+      ],
+      "note": "食事券もしくは食品",
+      "url": "https://www.kabuyutai.com/kobetu/fujiofood.html"
+    },
+    {
       "code": "2796",
       "name": "ファーマライズホールディングス",
       "cat": "自社製品",
@@ -285,10 +377,10 @@
       "url": "https://www.kabuyutai.com/kobetu/ichimasa.html"
     },
     {
-      "code": "299A",
-      "name": "クラシル",
-      "cat": "食事券・サービス券",
-      "value": 5760,
+      "code": "2928",
+      "name": "RIZAPグループ",
+      "cat": "その他",
+      "value": 15000,
       "cond": "",
       "fix": [
         "3月"
@@ -296,8 +388,38 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/kurashiru.html"
+      "note": "chocoZapの半額券など",
+      "url": "https://www.kabuyutai.com/kobetu/rizapgroup.html"
+    },
+    {
+      "code": "2935",
+      "name": "ピックルスホールディングス",
+      "cat": "その他",
+      "value": 1500,
+      "cond": "",
+      "fix": [
+        "2月"
+      ],
+      "arrive": [
+        "5月"
+      ],
+      "note": "自社商品詰め合わせ",
+      "url": "https://www.kabuyutai.com/kobetu/pickles.html"
+    },
+    {
+      "code": "2937",
+      "name": "サンクゼール",
+      "cat": "その他",
+      "value": 2500,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "自社サービス券",
+      "url": "https://www.kabuyutai.com/kobetu/stcousair.html"
     },
     {
       "code": "3003",
@@ -413,6 +535,23 @@
       "url": "https://www.kabuyutai.com/kobetu/kichiri.html"
     },
     {
+      "code": "3134",
+      "name": "Hamee",
+      "cat": "食事券・サービス券",
+      "value": 4000,
+      "cond": "",
+      "fix": [
+        "10月",
+        "4月"
+      ],
+      "arrive": [
+        "1月",
+        "7月"
+      ],
+      "note": "自社サービス券",
+      "url": "https://www.kabuyutai.com/kobetu/hamee.html"
+    },
+    {
       "code": "3154",
       "name": "メディアスホールディングス",
       "cat": "QUOカード",
@@ -493,6 +632,21 @@
       "url": "https://www.kabuyutai.com/kobetu/hotland.html"
     },
     {
+      "code": "3199",
+      "name": "綿半ホールディングス",
+      "cat": "自社製品",
+      "value": 2000,
+      "cond": "",
+      "fix": [
+        "9月"
+      ],
+      "arrive": [
+        "12月"
+      ],
+      "note": "オリジナル製品",
+      "url": "https://www.kabuyutai.com/kobetu/watahan.html"
+    },
+    {
       "code": "3222",
       "name": "ユナイテッド・スーパーマーケット・ホールディングス",
       "cat": "地場産品",
@@ -512,7 +666,7 @@
     {
       "code": "3291",
       "name": "飯田グループホールディングス",
-      "cat": "その他",
+      "cat": "食事券・サービス券",
       "value": 15400,
       "cond": "",
       "fix": [
@@ -527,7 +681,7 @@
     {
       "code": "3320",
       "name": "クロスプラス",
-      "cat": "その他",
+      "cat": "食事券・サービス券",
       "value": 3000,
       "cond": "",
       "fix": [
@@ -536,7 +690,7 @@
       "arrive": [
         "4月"
       ],
-      "note": "",
+      "note": "買い物割引クーポン",
       "url": "https://www.kabuyutai.com/kobetu/crossplus.html"
     },
     {
@@ -733,6 +887,21 @@
       "url": "https://www.kabuyutai.com/kobetu/world.html"
     },
     {
+      "code": "3641",
+      "name": "パピレス",
+      "cat": "食事券・サービス券",
+      "value": 10000,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "Rentaポイント",
+      "url": "https://www.kabuyutai.com/kobetu/papy.html"
+    },
+    {
       "code": "3645",
       "name": "メディカルネット",
       "cat": "QUOカード",
@@ -793,6 +962,21 @@
       ],
       "note": "",
       "url": "https://www.kabuyutai.com/kobetu/osk.html"
+    },
+    {
+      "code": "3987",
+      "name": "エコモット",
+      "cat": "食事券・サービス券",
+      "value": 5000,
+      "cond": "",
+      "fix": [
+        "8月"
+      ],
+      "arrive": [
+        "11月"
+      ],
+      "note": "クーポン",
+      "url": "https://www.kabuyutai.com/kobetu/ecomott.html"
     },
     {
       "code": "4376",
@@ -889,6 +1073,21 @@
       "url": "https://www.kabuyutai.com/kobetu/mcury.html"
     },
     {
+      "code": "5261",
+      "name": "リソルホールディングス",
+      "cat": "その他",
+      "value": 20000,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "ホテル券",
+      "url": "https://www.kabuyutai.com/kobetu/resol.html"
+    },
+    {
       "code": "5301",
       "name": "東海カーボン",
       "cat": "カタログギフト",
@@ -902,36 +1101,6 @@
       ],
       "note": "",
       "url": "https://www.kabuyutai.com/kobetu/tokaicarbon.html"
-    },
-    {
-      "code": "545A",
-      "name": "トランヴィア",
-      "cat": "QUOカード",
-      "value": 1000,
-      "cond": "",
-      "fix": [
-        "9月"
-      ],
-      "arrive": [
-        "12月"
-      ],
-      "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/toranvia.html"
-    },
-    {
-      "code": "559A",
-      "name": "梅乃宿酒造",
-      "cat": "自社製品",
-      "value": 1000,
-      "cond": "",
-      "fix": [
-        "6月"
-      ],
-      "arrive": [
-        "9月"
-      ],
-      "note": "自社商品券",
-      "url": "https://www.kabuyutai.com/kobetu/umenoyado.html"
     },
     {
       "code": "5616",
@@ -994,6 +1163,21 @@
       "url": "https://www.kabuyutai.com/kobetu/willgroup.html"
     },
     {
+      "code": "6182",
+      "name": "メタリアル",
+      "cat": "食事券・サービス券",
+      "value": null,
+      "cond": "",
+      "fix": [
+        "2月"
+      ],
+      "arrive": [
+        "5月"
+      ],
+      "note": "自社サービス券",
+      "url": "https://www.kabuyutai.com/kobetu/metareal.html"
+    },
+    {
       "code": "6186",
       "name": "一蔵",
       "cat": "食事券・サービス券",
@@ -1009,6 +1193,21 @@
       "url": "https://www.kabuyutai.com/kobetu/ichikura.html"
     },
     {
+      "code": "6286",
+      "name": "靜甲",
+      "cat": "QUOカード",
+      "value": 3000,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "",
+      "url": "https://www.kabuyutai.com/kobetu/seiko-co.html"
+    },
+    {
       "code": "6306",
       "name": "日工",
       "cat": "QUOカード",
@@ -1022,6 +1221,21 @@
       ],
       "note": "",
       "url": "https://www.kabuyutai.com/kobetu/nikko-net.html"
+    },
+    {
+      "code": "6580",
+      "name": "ライトアップ",
+      "cat": "食事券・サービス券",
+      "value": 18000,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "Jシステム・JSaaSのサービス券",
+      "url": "https://www.kabuyutai.com/kobetu/writeup.html"
     },
     {
       "code": "6630",
@@ -1068,6 +1282,23 @@
       ],
       "note": "",
       "url": "https://www.kabuyutai.com/kobetu/icom.html"
+    },
+    {
+      "code": "6942",
+      "name": "ソフィアホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 3000,
+      "cond": "",
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "キルフェボンのギフトカード",
+      "url": "https://www.kabuyutai.com/kobetu/sophia.html"
     },
     {
       "code": "7127",
@@ -1345,6 +1576,21 @@
       ],
       "note": "",
       "url": "https://www.kabuyutai.com/kobetu/via-hd.html"
+    },
+    {
+      "code": "7975",
+      "name": "リヒトラブ",
+      "cat": "その他",
+      "value": 3000,
+      "cond": "",
+      "fix": [
+        "2月"
+      ],
+      "arrive": [
+        "5月"
+      ],
+      "note": "自社製品",
+      "url": "https://www.kabuyutai.com/kobetu/lihit-lab.html"
     },
     {
       "code": "8013",
@@ -1691,6 +1937,23 @@
       ],
       "note": "Pontaポイント",
       "url": "https://www.kabuyutai.com/kobetu/okinawa_cellular.html"
+    },
+    {
+      "code": "9633",
+      "name": "東京テアトル",
+      "cat": "その他",
+      "value": null,
+      "cond": "",
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "映画券",
+      "url": "https://www.kabuyutai.com/kobetu/theatres.html"
     },
     {
       "code": "9955",
