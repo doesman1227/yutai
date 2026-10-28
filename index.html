@@ -109,6 +109,12 @@
 
   .empty{color:var(--faint);font-size:.86rem;margin:0}
 
+  /* 社名から優待情報サイトの銘柄ページへ。線は薄く敷いておき、触れると色が出る */
+  a.kb{color:inherit;text-decoration:underline;text-decoration-color:var(--faint);
+    text-decoration-thickness:1px;text-underline-offset:.26em;text-decoration-skip-ink:none;
+    transition:color .15s,text-decoration-color .15s}
+  a.kb:hover,a.kb:focus-visible{color:var(--accent);text-decoration-color:var(--accent)}
+
   footer{margin:84px 0 0;padding:26px 0 60px;border-top:1px solid var(--line)}
   footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
   footer a{color:var(--muted)}
@@ -124,7 +130,7 @@
     <p class="mn-tagline">一年をかけて、少しずつ届く。</p>
     <div class="lead">
       <p>株主優待は、買い物とも贈り物とも少し違う。自分で選んだはずなのに、届くまで何が入っているか忘れている。缶詰、きのこ、うなぎ、磁器、温泉の券。一年のどこかで、思い出した頃に届く。</p>
-      <p>ここは、その届きものの記録です。<span data-total>—</span>件。金額の大きさではなく、届く月と優待の種類で並べています。</p>
+      <p>ここは、その届きものの記録です。<span data-total>—</span>件。金額の大きさではなく、届く月と優待の種類で並べています。社名をたどると、最新の条件を <a href="https://www.kabuyutai.com/" target="_blank" rel="noopener">楽しい株主優待＆配当</a> の銘柄ページで確かめられます。</p>
     </div>
     <ul class="toc">
       <li><a href="#picks">気に入っているもの</a></li>
@@ -175,6 +181,10 @@
 // items.json を読んで、気に入っているもの・届く月・優待の種類の三通りに並べる。
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
+// 社名は優待情報サイトの銘柄ページへ送る。対応ページが無いものは文字のまま。
+const nameLink = it => it.url
+  ? `<a class="kb" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a>`
+  : esc(it.name);
 
 function pickCard(it){
   const meta = [
@@ -183,7 +193,7 @@ function pickCard(it){
     it.value ? yen(it.value) + "相当" : "",
   ].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("");
   return `<div class="pick">
-    <div class="hd"><b>${esc(it.name)}</b><span class="code">${esc(it.code)}</span></div>
+    <div class="hd"><b>${nameLink(it)}</b><span class="code">${esc(it.code)}</span></div>
     ${it.note ? `<span class="what">${esc(it.note)}</span>` : ""}
     <p class="memo">${esc(it.memo)}</p>
     <div class="meta">${meta}</div>
@@ -192,7 +202,7 @@ function pickCard(it){
 
 function monthBlock(month, list, max){
   const w = list.length ? Math.max(4, Math.round(list.length / max * 100)) : 0;
-  const items = list.map(it => `<li><span>${esc(it.name)}</span>${
+  const items = list.map(it => `<li><span>${nameLink(it)}</span>${
     it.note ? `<span class="w">${esc(it.note)}</span>` : ""}</li>`).join("");
   return `<div class="month${list.length ? "" : " none"}">
     <div class="mh">
@@ -210,7 +220,7 @@ function kindRow(it){
     it.fix.length ? "権利確定 " + it.fix.join("・") : "",
   ].filter(Boolean).join(" / ");
   return `<div class="row">
-    <span class="nm">${esc(it.name)}<span class="code">${esc(it.code)}</span>
+    <span class="nm">${nameLink(it)}<span class="code">${esc(it.code)}</span>
       ${it.note ? `<span class="w">${esc(it.note)}</span>` : ""}
       ${it.cond ? `<span class="cd">${esc(it.cond)}</span>` : ""}
     </span>

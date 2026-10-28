@@ -9,6 +9,9 @@
 下の ROWS は公開してよい列だけを写したもの。区切りは | で、順番は
 コード | 企業名 | 優待カテゴリ | 優待価値 | 条件 | 権利確定月 | 到着月 | 中身
 優待価値が空の銘柄は、金額が定まらないもの(オーナーズカードや割引率など)。
+
+SLUGS は社名から張るリンク先で、優待情報サイトの銘柄ページ。こちらの保有や
+取得価格とは関係のない、誰でも見られる公開ページだけを指している。
 """
 
 import json
@@ -40,7 +43,7 @@ ROWS = """
 3048|ビックカメラ|食事券・サービス券|4000||2月,8月|5月,11月|サービス券
 3053|ペッパーフードサービス|食事券・サービス券|6000||6月,12月|9月,3月|
 3063|jGroup|食事券・サービス券|8000||2月,8月|5月,10月|うなぎ
-3082|ちきりホールディングス|食事券・サービス券|3000||6月,12月|9月,3月|
+3082|きちりホールディングス|食事券・サービス券|3000||6月,12月|9月,3月|
 3154|メディアスホールディングス|QUOカード|1000||6月|9月|
 3167|TOKAIホールディングス|食事券・サービス券|10200||3月,9月|6月,12月|通信割引券
 3169|ミサワ|食事券・サービス券|5000||1月|9月|磁器
@@ -142,6 +145,124 @@ PICKS = {
     "7840": "寝具。毎日使うものが優待で届くという、いちばん地味で効くやつ。",
 }
 
+# 社名から飛ばす先。「楽しい株主優待&配当」(kabuyutai.com) の銘柄ページ。
+# 向こうのURLは証券コードではなく各社の綴りなので、コードから機械的に作れない。
+# 下は月別一覧から拾った対応表で、順番は コード | ページ名。
+# 銘柄を足したら、向こうの該当月の一覧でページ名を調べて一行足す。
+SLUGS = """
+1301|kyokuyo
+1375|maitake
+1780|yamaura
+1848|fujips
+1965|techno-ryowa
+2198|ikk-grp
+2222|kotobukispirits
+2267|yakult
+2340|gokurakuyu-holdings
+2404|tetsujin
+2493|e-supportlink
+2668|tabio
+2722|ai-kei
+2730|edion
+2796|pharmarise
+2897|nissin
+2904|ichimasa
+299A|kurashiru
+3003|hulic
+3036|alconix
+3046|jinsholdings
+3048|biccamera
+3053|pepper-fs
+3063|jgroup
+3082|kichiri
+3154|medius
+3167|tokaiholdings
+3169|unico-fan
+3191|joyfulhonda
+3196|hotland
+3222|usmh
+3291|ighd
+3320|crossplus
+3372|kanmonkai
+3387|createrestaurants
+3395|saint-marc-hd
+3415|tokyobase
+3474|g-fac
+3479|tkp
+3521|econach
+3539|jm-holdings
+3543|komeda-holdings
+3557|united-collective
+3561|chikaranomoto
+3612|world
+3645|medical-net
+3710|jorudan
+3939|kanamic
+3943|osk
+4376|kufu
+4661|olc
+4755|rakuten
+4765|morningstar
+4825|weathernews
+5025|mcury
+5301|tokaicarbon
+545A|toranvia
+559A|umenoyado
+5616|ame-kaze-taiyo
+5949|unipres
+6082|rideonexpresshd
+6089|willgroup
+6186|ichikura
+6306|nikko-net
+6630|ya-man
+6819|izu-sr
+6820|icom
+7127|ikka-holdings
+7164|zenkoku
+7196|casa-inc
+7267|honda
+7272|yamaha-motor
+7277|tbk-jp
+7327|dhfg
+7337|hirogin
+7347|mercuria
+7384|procrea-hd
+7388|fpp
+7416|haruyama
+7513|kojima
+7539|ainavo
+7613|siix
+7840|francebed-hd
+7885|takano-net
+7918|via-hd
+8013|naigai
+8029|look-holdings
+8136|sanrio
+8207|teng
+8214|aoki-hd
+8267|aeon
+8285|mitani
+8346|tohobank
+8566|r-lease
+8783|gfa
+8841|toc
+8876|relo
+8881|nisshin-hd
+9160|novarese
+9166|genda
+9215|casy
+9251|ab-company
+9347|nkanzaihd
+9418|unext
+9432|ntt
+9433|kddi
+9436|okinawa_cellular
+9955|yonkyu
+9979|daisyo
+9997|belluna
+"""
+SITE = "https://www.kabuyutai.com/kobetu/{}.html"
+
 CAT_ORDER = [
     "食事券・サービス券",
     "自社製品",
@@ -172,9 +293,12 @@ def parse(block):
 
 def main():
     items = parse(ROWS)
+    slugs = dict(l.split("|") for l in SLUGS.strip().splitlines())
     for it in items:
         if it["code"] in PICKS:
             it["memo"] = PICKS[it["code"]]
+        if it["code"] in slugs:
+            it["url"] = SITE.format(slugs[it["code"]])
 
     unknown = [c for c in PICKS if c not in {i["code"] for i in items}]
     if unknown:
@@ -183,6 +307,14 @@ def main():
     bad = [i["code"] for i in items if any(m not in MONTHS for m in i["fix"] + i["arrive"])]
     if bad:
         raise SystemExit(f"月の書き方が不正: {bad}")
+
+    stray = [c for c in slugs if c not in {i["code"] for i in items}]
+    if stray:
+        raise SystemExit(f"SLUGS に一覧外のコードがある: {stray}")
+
+    nolink = [i["code"] for i in items if "url" not in i]
+    if nolink:
+        print(f"リンク先が未登録: {nolink}")
 
     data = {
         "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。"
