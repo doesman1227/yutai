@@ -78,7 +78,10 @@
   .month ul{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:2px 20px}
   @media (min-width:560px){.month ul{grid-template-columns:repeat(2,1fr)}}
   @media (min-width:880px){.month ul{grid-template-columns:repeat(3,1fr)}}
-  .month li{font-size:.85rem;line-height:1.75;color:var(--ink);display:flex;gap:7px;align-items:baseline}
+  /* 社名と中身は横に並べるが、入りきらないときは社名を途中で折らずに中身を下へ送る */
+  .month li{font-size:.85rem;line-height:1.75;color:var(--ink);
+    display:flex;flex-wrap:wrap;gap:0 7px;align-items:baseline}
+  .month li > *{flex:0 0 auto;max-width:100%}
   .month li .w{color:var(--muted);font-size:.78rem}
   .month.none .mn{color:var(--faint)}
 
@@ -110,7 +113,9 @@
   .empty{color:var(--faint);font-size:.86rem;margin:0}
 
   /* 社名から優待情報サイトの銘柄ページへ。線は薄く敷いておき、触れると色が出る */
-  a.kb{color:inherit;text-decoration:underline;text-decoration-color:var(--faint);
+  /* 長い社名は「・」で折る。区切りが無いものだけ、やむをえず途中で折る */
+  a.kb{word-break:keep-all;overflow-wrap:anywhere;
+    color:inherit;text-decoration:underline;text-decoration-color:var(--faint);
     text-decoration-thickness:1px;text-underline-offset:.26em;text-decoration-skip-ink:none;
     transition:color .15s,text-decoration-color .15s}
   a.kb:hover,a.kb:focus-visible{color:var(--accent);text-decoration-color:var(--accent)}
