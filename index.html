@@ -70,10 +70,13 @@
   /* 届く月 */
   .month{border-top:1px solid var(--line);padding:16px 0}
   .month:last-child{border-bottom:1px solid var(--line)}
-  .month .mh{display:flex;align-items:center;gap:12px;margin:0 0 2px}
+  /* 月名と件数の間に棒を敷く。棒は余った幅のなかで伸ばすので、何件あってもはみ出さない */
+  /* 月名のうしろに棒と件数。棒は余った幅のなかで伸ばすので、何件あってもはみ出さない */
+  .month .mh{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:12px;margin:0 0 2px}
   .month .mn{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;
     min-width:3.2em;font-variant-numeric:tabular-nums}
-  .month .bar{height:3px;background:var(--accent);opacity:.45;border-radius:2px;flex:0 0 auto}
+  .month .track{display:flex;align-items:center;gap:10px;min-width:0}
+  .month .bar{flex:0 0 auto;height:3px;max-width:86%;background:var(--accent);opacity:.45;border-radius:2px}
   .month .mc{font-size:.7rem;color:var(--faint);letter-spacing:.1em;font-variant-numeric:tabular-nums}
   .month ul{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:2px 20px}
   @media (min-width:560px){.month ul{grid-template-columns:repeat(2,1fr)}}
@@ -212,8 +215,8 @@ function monthBlock(month, list, max){
   return `<div class="month${list.length ? "" : " none"}">
     <div class="mh">
       <span class="mn">${esc(month)}</span>
-      ${w ? `<span class="bar" style="width:${w}%"></span>` : ""}
-      <span class="mc">${list.length ? list.length + "件" : "なし"}</span>
+      <span class="track"><span class="bar" style="width:${w}%"></span>
+        <span class="mc">${list.length ? list.length + "件" : "なし"}</span></span>
     </div>
     ${list.length ? `<ul>${items}</ul>` : ""}
   </div>`;

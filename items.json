@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "catOrder": [
     "食事券・サービス券",
     "自社製品",
@@ -58,15 +58,15 @@
       "code": "545A",
       "name": "トランヴィア",
       "cat": "QUOカード・ギフト券",
-      "value": 1000,
-      "cond": "",
+      "value": 2000,
+      "cond": "2026年は記念優待で3,000円",
       "fix": [
         "9月"
       ],
       "arrive": [
         "12月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=545A"
     },
     {
@@ -128,7 +128,7 @@
       "arrive": [
         "7月"
       ],
-      "note": "",
+      "note": "地域の特産品",
       "url": "https://kabutan.jp/stock/yutai?code=1780"
     },
     {
@@ -143,7 +143,7 @@
       "arrive": [
         "12月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=1848"
     },
     {
@@ -220,7 +220,7 @@
       "arrive": [
         "11月"
       ],
-      "note": "温泉サービス券(株主パスポートで受け取る)",
+      "note": "温泉の無料入浴券(電子化)",
       "url": "https://kabutan.jp/stock/yutai?code=2340"
     },
     {
@@ -235,7 +235,7 @@
       "arrive": [
         "11月"
       ],
-      "note": "",
+      "note": "食事券",
       "url": "https://kabutan.jp/stock/yutai?code=2404"
     },
     {
@@ -266,7 +266,7 @@
       "arrive": [
         "5月"
       ],
-      "note": "割引券",
+      "note": "買い物優待ポイント",
       "url": "https://kabutan.jp/stock/yutai?code=2668"
     },
     {
@@ -296,7 +296,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "ギフトカード",
       "url": "https://kabutan.jp/stock/yutai?code=2730"
     },
     {
@@ -358,7 +358,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "自社グループ製品の詰め合わせ",
       "url": "https://kabutan.jp/stock/yutai?code=2897"
     },
     {
@@ -433,7 +433,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=3003"
     },
     {
@@ -441,14 +441,14 @@
       "name": "アルコニックス",
       "cat": "カタログギフト",
       "value": 2000,
-      "cond": "2026年より変更",
+      "cond": "300株以上(2026年より)",
       "fix": [
         "3月"
       ],
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=3036"
     },
     {
@@ -463,7 +463,7 @@
       "arrive": [
         "11月"
       ],
-      "note": "メガネ",
+      "note": "メガネの買い物優待券",
       "url": "https://kabutan.jp/stock/yutai?code=3046"
     },
     {
@@ -497,7 +497,7 @@
         "9月",
         "3月"
       ],
-      "note": "",
+      "note": "食事券",
       "url": "https://kabutan.jp/stock/yutai?code=3053"
     },
     {
@@ -531,7 +531,7 @@
         "9月",
         "3月"
       ],
-      "note": "",
+      "note": "食事割引券",
       "url": "https://kabutan.jp/stock/yutai?code=3082"
     },
     {
@@ -563,7 +563,7 @@
       "arrive": [
         "9月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=3154"
     },
     {
@@ -580,7 +580,7 @@
         "6月",
         "12月"
       ],
-      "note": "通信割引券",
+      "note": "QUOカード・水・通信割引から選ぶ",
       "url": "https://kabutan.jp/stock/yutai?code=3167"
     },
     {
@@ -800,7 +800,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "温浴施設の優待券",
       "url": "https://kabutan.jp/stock/yutai?code=3521"
     },
     {
@@ -832,7 +832,7 @@
         "5月",
         "11月"
       ],
-      "note": "サービス券",
+      "note": "KOMECAへのチャージ",
       "url": "https://kabutan.jp/stock/yutai?code=3543"
     },
     {
@@ -849,7 +849,7 @@
         "5月",
         "11月"
       ],
-      "note": "",
+      "note": "食事優待券",
       "url": "https://kabutan.jp/stock/yutai?code=3557"
     },
     {
@@ -866,7 +866,7 @@
         "6月",
         "12月"
       ],
-      "note": "",
+      "note": "優待カード",
       "url": "https://kabutan.jp/stock/yutai?code=3561"
     },
     {
@@ -883,7 +883,7 @@
         "5月",
         "11月"
       ],
-      "note": "",
+      "note": "買い物優待券",
       "url": "https://kabutan.jp/stock/yutai?code=3612"
     },
     {
@@ -960,7 +960,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=3943"
     },
     {
@@ -990,7 +990,7 @@
       "arrive": [
         "12月"
       ],
-      "note": "",
+      "note": "自社サービスの利用チケット",
       "url": "https://kabutan.jp/stock/yutai?code=4376"
     },
     {
@@ -1005,7 +1005,7 @@
       "arrive": [
         "12月"
       ],
-      "note": "",
+      "note": "1日パスポート券",
       "url": "https://kabutan.jp/stock/yutai?code=4661"
     },
     {
@@ -1052,7 +1052,7 @@
         "8月",
         "2月"
       ],
-      "note": "",
+      "note": "ウェザーニュースの有料会員権",
       "url": "https://kabutan.jp/stock/yutai?code=4825"
     },
     {
@@ -1069,7 +1069,7 @@
         "5月",
         "11月"
       ],
-      "note": "",
+      "note": "自社サービスのクーポン",
       "url": "https://kabutan.jp/stock/yutai?code=5025"
     },
     {
@@ -1099,7 +1099,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=5301"
     },
     {
@@ -1129,7 +1129,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "優待ポイント",
       "url": "https://kabutan.jp/stock/yutai?code=5949"
     },
     {
@@ -1152,7 +1152,7 @@
       "name": "ウィルグループ",
       "cat": "QUOカード・ギフト券",
       "value": 500,
-      "cond": "3年まで500円ずつ上がる・200株で倍",
+      "cond": "300株以上",
       "fix": [
         "3月"
       ],
@@ -1189,7 +1189,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "自社グループの優待券",
       "url": "https://kabutan.jp/stock/yutai?code=6186"
     },
     {
@@ -1204,7 +1204,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=6286"
     },
     {
@@ -1212,7 +1212,7 @@
       "name": "日工",
       "cat": "QUOカード・ギフト券",
       "value": 500,
-      "cond": "",
+      "cond": "500株以上",
       "fix": [
         "3月"
       ],
@@ -1249,7 +1249,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "買い物割引券",
       "url": "https://kabutan.jp/stock/yutai?code=6630"
     },
     {
@@ -1280,7 +1280,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=6820"
     },
     {
@@ -1314,7 +1314,7 @@
         "6月",
         "12月"
       ],
-      "note": "",
+      "note": "食事優待券",
       "url": "https://kabutan.jp/stock/yutai?code=7127"
     },
     {
@@ -1329,7 +1329,7 @@
       "arrive": [
         "10月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=7196"
     },
     {
@@ -1344,7 +1344,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "イベント・見学会の招待",
       "url": "https://kabutan.jp/stock/yutai?code=7267"
     },
     {
@@ -1359,7 +1359,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "優待ポイント",
       "url": "https://kabutan.jp/stock/yutai?code=7272"
     },
     {
@@ -1374,7 +1374,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "東北のブランド米かQUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=7277"
     },
     {
@@ -1389,7 +1389,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "新潟の特産品カタログ",
       "url": "https://kabutan.jp/stock/yutai?code=7327"
     },
     {
@@ -1419,7 +1419,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "QUOカード",
       "url": "https://kabutan.jp/stock/yutai?code=7347"
     },
     {
@@ -1434,7 +1434,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "地元の特産品",
       "url": "https://kabutan.jp/stock/yutai?code=7384"
     },
     {
@@ -1483,7 +1483,7 @@
         "5月",
         "11月"
       ],
-      "note": "",
+      "note": "買い物優待券",
       "url": "https://kabutan.jp/stock/yutai?code=7513"
     },
     {
@@ -1560,7 +1560,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "株主優待券",
       "url": "https://kabutan.jp/stock/yutai?code=7918"
     },
     {
@@ -1590,7 +1590,7 @@
       "arrive": [
         "4月"
       ],
-      "note": "",
+      "note": "オンラインショップのポイント",
       "url": "https://kabutan.jp/stock/yutai?code=8013"
     },
     {
@@ -1640,7 +1640,7 @@
         "6月",
         "12月"
       ],
-      "note": "",
+      "note": "食事券",
       "url": "https://kabutan.jp/stock/yutai?code=8207"
     },
     {
@@ -1719,7 +1719,7 @@
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=8566"
     },
     {
@@ -1772,15 +1772,15 @@
       "code": "8881",
       "name": "日神グループホールディングス",
       "cat": "カタログギフト",
-      "value": 3000,
-      "cond": "",
+      "value": 5000,
+      "cond": "1,000株以上・2年目以降は5,500円",
       "fix": [
         "3月"
       ],
       "arrive": [
         "6月"
       ],
-      "note": "",
+      "note": "優待ポイント",
       "url": "https://kabutan.jp/stock/yutai?code=8881"
     },
     {
@@ -1795,7 +1795,7 @@
       "arrive": [
         "3月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=9160"
     },
     {
@@ -1812,7 +1812,7 @@
         "4月",
         "11月"
       ],
-      "note": "",
+      "note": "グループ店のクーポン",
       "url": "https://kabutan.jp/stock/yutai?code=9166"
     },
     {
@@ -1827,7 +1827,7 @@
       "arrive": [
         "2月"
       ],
-      "note": "",
+      "note": "家事代行の利用券",
       "url": "https://kabutan.jp/stock/yutai?code=9215"
     },
     {
@@ -1859,7 +1859,7 @@
         "6月",
         "12月"
       ],
-      "note": "",
+      "note": "カタログギフト",
       "url": "https://kabutan.jp/stock/yutai?code=9347"
     },
     {
@@ -1946,7 +1946,7 @@
       "name": "ヨンキュウ",
       "cat": "自社製品",
       "value": 6000,
-      "cond": "",
+      "cond": "200株以上(2025年9月より)",
       "fix": [
         "3月",
         "9月"
@@ -1972,7 +1972,7 @@
         "5月",
         "11月"
       ],
-      "note": "",
+      "note": "飲食券",
       "url": "https://kabutan.jp/stock/yutai?code=9979"
     },
     {
@@ -1989,7 +1989,7 @@
         "6月",
         "12月"
       ],
-      "note": "",
+      "note": "通販の割引と自社商品",
       "url": "https://kabutan.jp/stock/yutai?code=9997"
     }
   ]
