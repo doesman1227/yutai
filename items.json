@@ -97,7 +97,6 @@
         "7月"
       ],
       "note": "缶詰",
-      "memo": "缶詰。急いで食べなくていいものが届くと、戸棚が少し安心する。",
       "url": "https://kabutan.jp/stock/yutai?code=1301"
     },
     {
@@ -113,7 +112,6 @@
         "6月"
       ],
       "note": "きのこ",
-      "memo": "きのこ。箱を開けた瞬間の匂いが、どの優待とも違う。",
       "url": "https://kabutan.jp/stock/yutai?code=1375"
     },
     {
@@ -221,6 +219,7 @@
         "11月"
       ],
       "note": "温泉の無料入浴券(電子化)",
+      "memo": "らくスパで使えるサービス券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=2340"
     },
     {
@@ -251,7 +250,6 @@
         "8月"
       ],
       "note": "青森産100%リンゴジュース×3",
-      "memo": "青森産100%のリンゴジュースが三本。産地がはっきりしているものは、それだけで嬉しい。",
       "url": "https://kabutan.jp/stock/yutai?code=2493"
     },
     {
@@ -434,6 +432,7 @@
         "3月"
       ],
       "note": "カタログギフト",
+      "memo": "カタログギフトが二冊もらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3003"
     },
     {
@@ -481,6 +480,7 @@
         "11月"
       ],
       "note": "サービス券",
+      "memo": "Appleギフトカードが買えるサービス券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3048"
     },
     {
@@ -581,6 +581,7 @@
         "12月"
       ],
       "note": "QUOカード・水・通信割引から選ぶ",
+      "memo": "SIM割引券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3167"
     },
     {
@@ -596,7 +597,7 @@
         "9月"
       ],
       "note": "磁器",
-      "memo": "食事券でも菓子でもなく、磁器。使うたびに手元に残るものが届くのは、この一件だけ。",
+      "memo": "毎年、スタイリッシュな食器が届く。",
       "url": "https://kabutan.jp/stock/yutai?code=3169"
     },
     {
@@ -708,7 +709,6 @@
         "12月"
       ],
       "note": "ふぐ割引券",
-      "memo": "ふぐの割引券。年に二回届くが、使うのはたいてい寒くなってから。",
       "url": "https://kabutan.jp/stock/yutai?code=3372"
     },
     {
@@ -726,6 +726,7 @@
         "11月"
       ],
       "note": "お食事券",
+      "memo": "いろんなお店で使える食事券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3387"
     },
     {
@@ -741,6 +742,7 @@
         "6月"
       ],
       "note": "割引カード",
+      "memo": "サンマルクカフェで使える割引カードがもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3395"
     },
     {
@@ -771,6 +773,7 @@
         "3月"
       ],
       "note": "うなぎ",
+      "memo": "秋葉原でひつまぶしが食べられる。",
       "url": "https://kabutan.jp/stock/yutai?code=3474"
     },
     {
@@ -786,6 +789,7 @@
         "5月"
       ],
       "note": "食事・宿泊券",
+      "memo": "鉄板焼や宿泊で使えるサービス券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3479"
     },
     {
@@ -801,6 +805,7 @@
         "6月"
       ],
       "note": "温浴施設の優待券",
+      "memo": "テルマー湯の無料券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3521"
     },
     {
@@ -833,6 +838,7 @@
         "11月"
       ],
       "note": "KOMECAへのチャージ",
+      "memo": "コメカがもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=3543"
     },
     {
@@ -1021,6 +1027,7 @@
         "5月"
       ],
       "note": "通信料",
+      "memo": "SIM一年分がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=4755"
     },
     {
@@ -1053,6 +1060,7 @@
         "2月"
       ],
       "note": "ウェザーニュースの有料会員権",
+      "memo": "有料会員が無料で使える。",
       "url": "https://kabutan.jp/stock/yutai?code=4825"
     },
     {
@@ -1265,7 +1273,6 @@
         "6月"
       ],
       "note": "グランピング",
-      "memo": "グランピングの券。優待で「泊まる」が来るのは珍しい。",
       "url": "https://kabutan.jp/stock/yutai?code=6819"
     },
     {
@@ -1484,6 +1491,7 @@
         "11月"
       ],
       "note": "買い物優待券",
+      "memo": "Appleギフトカードが買えるサービス券がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=7513"
     },
     {
@@ -1530,7 +1538,6 @@
         "6月"
       ],
       "note": "寝具",
-      "memo": "寝具。毎日使うものが優待で届くという、いちばん地味で効くやつ。",
       "url": "https://kabutan.jp/stock/yutai?code=7840"
     },
     {
@@ -1561,6 +1568,7 @@
         "6月"
       ],
       "note": "株主優待券",
+      "memo": "千円ごとに使える五百円券を、大量にもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=7918"
     },
     {
@@ -1623,7 +1631,6 @@
         "12月"
       ],
       "note": "優待入場券",
-      "memo": "優待入場券。使う前からもう楽しい部類。",
       "url": "https://kabutan.jp/stock/yutai?code=8136"
     },
     {
@@ -1690,6 +1697,7 @@
         "6月"
       ],
       "note": "磁器",
+      "memo": "高価でスタイリッシュな磁器がもらえる。",
       "url": "https://kabutan.jp/stock/yutai?code=8285"
     },
     {
@@ -1750,7 +1758,6 @@
         "6月"
       ],
       "note": "浅草ROXまつり湯",
-      "memo": "浅草ROXまつり湯。行き先が決まっている券は、予定を立てる口実になる。",
       "url": "https://kabutan.jp/stock/yutai?code=8841"
     },
     {
@@ -1843,6 +1850,7 @@
         "1月"
       ],
       "note": "ヘアケア商品",
+      "memo": "ヘアケア商品が届く。",
       "url": "https://kabutan.jp/stock/yutai?code=9251"
     },
     {
@@ -1955,7 +1963,7 @@
         "6月"
       ],
       "note": "うなぎ",
-      "memo": "三月に権利が確定して、六月にうなぎが届く。夏の入口の合図みたいになっている。",
+      "memo": "うなぎが届く。",
       "url": "https://kabutan.jp/stock/yutai?code=9955"
     },
     {

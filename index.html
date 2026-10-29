@@ -202,7 +202,7 @@ function pickCard(it){
   ].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("");
   return `<div class="pick">
     <div class="hd"><b>${nameLink(it)}</b><span class="code">${esc(it.code)}</span></div>
-    ${it.note ? `<span class="what">${esc(it.note)}</span>` : ""}
+    ${it.note && !(it.memo || "").includes(it.note) ? `<span class="what">${esc(it.note)}</span>` : ""}
     <p class="memo">${esc(it.memo)}</p>
     <div class="meta">${meta}</div>
   </div>`;
