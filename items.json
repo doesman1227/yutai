@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "catOrder": [
     "食事券・サービス券",
     "自社製品",
@@ -37,7 +37,7 @@
         "12月"
       ],
       "note": "自社サービス1ヶ月分",
-      "url": "https://www.kabuyutai.com/kobetu/schoo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=264A"
     },
     {
       "code": "299A",
@@ -52,7 +52,7 @@
         "6月"
       ],
       "note": "自社サービス無料券",
-      "url": "https://www.kabuyutai.com/kobetu/kurashiru.html"
+      "url": "https://kabutan.jp/stock/yutai?code=299A"
     },
     {
       "code": "545A",
@@ -67,7 +67,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/toranvia.html"
+      "url": "https://kabutan.jp/stock/yutai?code=545A"
     },
     {
       "code": "559A",
@@ -82,7 +82,7 @@
         "9月"
       ],
       "note": "自社商品券",
-      "url": "https://www.kabuyutai.com/kobetu/umenoyado.html"
+      "url": "https://kabutan.jp/stock/yutai?code=559A"
     },
     {
       "code": "1301",
@@ -98,7 +98,7 @@
       ],
       "note": "缶詰",
       "memo": "缶詰。急いで食べなくていいものが届くと、戸棚が少し安心する。",
-      "url": "https://www.kabuyutai.com/kobetu/kyokuyo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=1301"
     },
     {
       "code": "1375",
@@ -114,7 +114,7 @@
       ],
       "note": "きのこ",
       "memo": "きのこ。箱を開けた瞬間の匂いが、どの優待とも違う。",
-      "url": "https://www.kabuyutai.com/kobetu/maitake.html"
+      "url": "https://kabutan.jp/stock/yutai?code=1375"
     },
     {
       "code": "1780",
@@ -129,7 +129,7 @@
         "7月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/yamaura.html"
+      "url": "https://kabutan.jp/stock/yutai?code=1780"
     },
     {
       "code": "1848",
@@ -144,7 +144,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/fujips.html"
+      "url": "https://kabutan.jp/stock/yutai?code=1848"
     },
     {
       "code": "1965",
@@ -159,7 +159,7 @@
         "7月"
       ],
       "note": "お茶",
-      "url": "https://www.kabuyutai.com/kobetu/techno-ryowa.html"
+      "url": "https://kabutan.jp/stock/yutai?code=1965"
     },
     {
       "code": "2198",
@@ -174,7 +174,7 @@
         "7月"
       ],
       "note": "お菓子",
-      "url": "https://www.kabuyutai.com/kobetu/ikk-grp.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2198"
     },
     {
       "code": "2222",
@@ -189,7 +189,7 @@
         "6月"
       ],
       "note": "お菓子",
-      "url": "https://www.kabuyutai.com/kobetu/kotobukispirits.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2222"
     },
     {
       "code": "2267",
@@ -206,7 +206,7 @@
         "12月"
       ],
       "note": "自社商品詰め合わせ",
-      "url": "https://www.kabuyutai.com/kobetu/yakult.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2267"
     },
     {
       "code": "2340",
@@ -221,7 +221,7 @@
         "11月"
       ],
       "note": "温泉サービス券(株主パスポートで受け取る)",
-      "url": "https://www.kabuyutai.com/kobetu/gokurakuyu-holdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2340"
     },
     {
       "code": "2404",
@@ -236,7 +236,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/tetsujin.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2404"
     },
     {
       "code": "2493",
@@ -252,7 +252,7 @@
       ],
       "note": "青森産100%リンゴジュース×3",
       "memo": "青森産100%のリンゴジュースが三本。産地がはっきりしているものは、それだけで嬉しい。",
-      "url": "https://www.kabuyutai.com/kobetu/e-supportlink.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2493"
     },
     {
       "code": "2668",
@@ -267,7 +267,7 @@
         "5月"
       ],
       "note": "割引券",
-      "url": "https://www.kabuyutai.com/kobetu/tabio.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2668"
     },
     {
       "code": "2722",
@@ -282,7 +282,7 @@
         "8月"
       ],
       "note": "自社商品",
-      "url": "https://www.kabuyutai.com/kobetu/ai-kei.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2722"
     },
     {
       "code": "2730",
@@ -297,7 +297,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/edion.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2730"
     },
     {
       "code": "2735",
@@ -312,7 +312,7 @@
         "11月"
       ],
       "note": "防災グッズ",
-      "url": "https://www.kabuyutai.com/kobetu/watts-jp.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2735"
     },
     {
       "code": "2752",
@@ -329,7 +329,7 @@
         "12月"
       ],
       "note": "食事券もしくは食品",
-      "url": "https://www.kabuyutai.com/kobetu/fujiofood.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2752"
     },
     {
       "code": "2796",
@@ -344,7 +344,7 @@
         "5月"
       ],
       "note": "歯磨き粉",
-      "url": "https://www.kabuyutai.com/kobetu/pharmarise.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2796"
     },
     {
       "code": "2897",
@@ -359,7 +359,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/nissin.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2897"
     },
     {
       "code": "2904",
@@ -374,7 +374,7 @@
         "9月"
       ],
       "note": "かまぼこ",
-      "url": "https://www.kabuyutai.com/kobetu/ichimasa.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2904"
     },
     {
       "code": "2928",
@@ -389,7 +389,7 @@
         "6月"
       ],
       "note": "chocoZapの半額券など",
-      "url": "https://www.kabuyutai.com/kobetu/rizapgroup.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2928"
     },
     {
       "code": "2935",
@@ -404,7 +404,7 @@
         "5月"
       ],
       "note": "自社商品詰め合わせ",
-      "url": "https://www.kabuyutai.com/kobetu/pickles.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2935"
     },
     {
       "code": "2937",
@@ -419,7 +419,7 @@
         "6月"
       ],
       "note": "自社サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/stcousair.html"
+      "url": "https://kabutan.jp/stock/yutai?code=2937"
     },
     {
       "code": "3003",
@@ -434,7 +434,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/hulic.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3003"
     },
     {
       "code": "3036",
@@ -449,7 +449,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/alconix.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3036"
     },
     {
       "code": "3046",
@@ -464,7 +464,7 @@
         "11月"
       ],
       "note": "メガネ",
-      "url": "https://www.kabuyutai.com/kobetu/jinsholdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3046"
     },
     {
       "code": "3048",
@@ -481,7 +481,7 @@
         "11月"
       ],
       "note": "サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/biccamera.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3048"
     },
     {
       "code": "3053",
@@ -498,7 +498,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/pepper-fs.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3053"
     },
     {
       "code": "3063",
@@ -515,7 +515,7 @@
         "10月"
       ],
       "note": "うなぎ",
-      "url": "https://www.kabuyutai.com/kobetu/jgroup.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3063"
     },
     {
       "code": "3082",
@@ -532,7 +532,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/kichiri.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3082"
     },
     {
       "code": "3134",
@@ -549,7 +549,7 @@
         "7月"
       ],
       "note": "自社サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/hamee.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3134"
     },
     {
       "code": "3154",
@@ -564,7 +564,7 @@
         "9月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/medius.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3154"
     },
     {
       "code": "3167",
@@ -581,7 +581,7 @@
         "12月"
       ],
       "note": "通信割引券",
-      "url": "https://www.kabuyutai.com/kobetu/tokaiholdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3167"
     },
     {
       "code": "3169",
@@ -597,7 +597,7 @@
       ],
       "note": "磁器",
       "memo": "食事券でも菓子でもなく、磁器。使うたびに手元に残るものが届くのは、この一件だけ。",
-      "url": "https://www.kabuyutai.com/kobetu/unico-fan.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3169"
     },
     {
       "code": "3191",
@@ -612,7 +612,7 @@
         "10月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/joyfulhonda.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3191"
     },
     {
       "code": "3196",
@@ -629,7 +629,7 @@
         "9月"
       ],
       "note": "たこ焼き",
-      "url": "https://www.kabuyutai.com/kobetu/hotland.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3196"
     },
     {
       "code": "3199",
@@ -644,7 +644,7 @@
         "12月"
       ],
       "note": "オリジナル製品",
-      "url": "https://www.kabuyutai.com/kobetu/watahan.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3199"
     },
     {
       "code": "3222",
@@ -661,7 +661,7 @@
         "11月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/usmh.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3222"
     },
     {
       "code": "3291",
@@ -676,7 +676,7 @@
         "6月"
       ],
       "note": "温浴施設",
-      "url": "https://www.kabuyutai.com/kobetu/ighd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3291"
     },
     {
       "code": "3320",
@@ -691,7 +691,7 @@
         "4月"
       ],
       "note": "買い物割引クーポン",
-      "url": "https://www.kabuyutai.com/kobetu/crossplus.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3320"
     },
     {
       "code": "3372",
@@ -709,7 +709,7 @@
       ],
       "note": "ふぐ割引券",
       "memo": "ふぐの割引券。年に二回届くが、使うのはたいてい寒くなってから。",
-      "url": "https://www.kabuyutai.com/kobetu/kanmonkai.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3372"
     },
     {
       "code": "3387",
@@ -726,7 +726,7 @@
         "11月"
       ],
       "note": "お食事券",
-      "url": "https://www.kabuyutai.com/kobetu/createrestaurants.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3387"
     },
     {
       "code": "3395",
@@ -741,7 +741,7 @@
         "6月"
       ],
       "note": "割引カード",
-      "url": "https://www.kabuyutai.com/kobetu/saint-marc-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3395"
     },
     {
       "code": "3415",
@@ -756,7 +756,7 @@
         "4月"
       ],
       "note": "買い物割引券",
-      "url": "https://www.kabuyutai.com/kobetu/tokyobase.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3415"
     },
     {
       "code": "3474",
@@ -771,7 +771,7 @@
         "3月"
       ],
       "note": "うなぎ",
-      "url": "https://www.kabuyutai.com/kobetu/g-fac.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3474"
     },
     {
       "code": "3479",
@@ -786,7 +786,7 @@
         "5月"
       ],
       "note": "食事・宿泊券",
-      "url": "https://www.kabuyutai.com/kobetu/tkp.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3479"
     },
     {
       "code": "3521",
@@ -801,7 +801,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/econach.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3521"
     },
     {
       "code": "3539",
@@ -816,7 +816,7 @@
         "10月"
       ],
       "note": "お肉",
-      "url": "https://www.kabuyutai.com/kobetu/jm-holdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3539"
     },
     {
       "code": "3543",
@@ -833,7 +833,7 @@
         "11月"
       ],
       "note": "サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/komeda-holdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3543"
     },
     {
       "code": "3557",
@@ -850,7 +850,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/united-collective.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3557"
     },
     {
       "code": "3561",
@@ -867,7 +867,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/chikaranomoto.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3561"
     },
     {
       "code": "3612",
@@ -884,7 +884,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/world.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3612"
     },
     {
       "code": "3641",
@@ -899,7 +899,7 @@
         "6月"
       ],
       "note": "Rentaポイント",
-      "url": "https://www.kabuyutai.com/kobetu/papy.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3641"
     },
     {
       "code": "3645",
@@ -914,7 +914,7 @@
         "8月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/medical-net.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3645"
     },
     {
       "code": "3710",
@@ -931,7 +931,7 @@
         "12月"
       ],
       "note": "サービス利用",
-      "url": "https://www.kabuyutai.com/kobetu/jorudan.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3710"
     },
     {
       "code": "3939",
@@ -946,7 +946,7 @@
         "12月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/kanamic.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3939"
     },
     {
       "code": "3943",
@@ -961,7 +961,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/osk.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3943"
     },
     {
       "code": "3987",
@@ -976,7 +976,7 @@
         "11月"
       ],
       "note": "クーポン",
-      "url": "https://www.kabuyutai.com/kobetu/ecomott.html"
+      "url": "https://kabutan.jp/stock/yutai?code=3987"
     },
     {
       "code": "4376",
@@ -991,7 +991,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/kufu.html"
+      "url": "https://kabutan.jp/stock/yutai?code=4376"
     },
     {
       "code": "4661",
@@ -1006,7 +1006,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/olc.html"
+      "url": "https://kabutan.jp/stock/yutai?code=4661"
     },
     {
       "code": "4755",
@@ -1021,7 +1021,7 @@
         "5月"
       ],
       "note": "通信料",
-      "url": "https://www.kabuyutai.com/kobetu/rakuten.html"
+      "url": "https://kabutan.jp/stock/yutai?code=4755"
     },
     {
       "code": "4765",
@@ -1036,7 +1036,7 @@
         "6月"
       ],
       "note": "仮想通貨・株式新聞",
-      "url": "https://www.kabuyutai.com/kobetu/morningstar.html"
+      "url": "https://kabutan.jp/stock/yutai?code=4765"
     },
     {
       "code": "4825",
@@ -1053,7 +1053,7 @@
         "2月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/weathernews.html"
+      "url": "https://kabutan.jp/stock/yutai?code=4825"
     },
     {
       "code": "5025",
@@ -1070,7 +1070,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/mcury.html"
+      "url": "https://kabutan.jp/stock/yutai?code=5025"
     },
     {
       "code": "5261",
@@ -1085,7 +1085,7 @@
         "6月"
       ],
       "note": "ホテル券",
-      "url": "https://www.kabuyutai.com/kobetu/resol.html"
+      "url": "https://kabutan.jp/stock/yutai?code=5261"
     },
     {
       "code": "5301",
@@ -1100,7 +1100,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/tokaicarbon.html"
+      "url": "https://kabutan.jp/stock/yutai?code=5301"
     },
     {
       "code": "5616",
@@ -1115,7 +1115,7 @@
         "3月"
       ],
       "note": "ECサイトの優待クーポン",
-      "url": "https://www.kabuyutai.com/kobetu/ame-kaze-taiyo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=5616"
     },
     {
       "code": "5949",
@@ -1130,7 +1130,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/unipres.html"
+      "url": "https://kabutan.jp/stock/yutai?code=5949"
     },
     {
       "code": "6082",
@@ -1145,7 +1145,7 @@
         "6月"
       ],
       "note": "サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/rideonexpresshd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6082"
     },
     {
       "code": "6089",
@@ -1160,7 +1160,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/willgroup.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6089"
     },
     {
       "code": "6182",
@@ -1175,7 +1175,7 @@
         "5月"
       ],
       "note": "自社サービス券",
-      "url": "https://www.kabuyutai.com/kobetu/metareal.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6182"
     },
     {
       "code": "6186",
@@ -1190,7 +1190,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/ichikura.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6186"
     },
     {
       "code": "6286",
@@ -1205,7 +1205,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/seiko-co.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6286"
     },
     {
       "code": "6306",
@@ -1220,7 +1220,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/nikko-net.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6306"
     },
     {
       "code": "6580",
@@ -1235,7 +1235,7 @@
         "6月"
       ],
       "note": "Jシステム・JSaaSのサービス券",
-      "url": "https://www.kabuyutai.com/kobetu/writeup.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6580"
     },
     {
       "code": "6630",
@@ -1250,7 +1250,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/ya-man.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6630"
     },
     {
       "code": "6819",
@@ -1266,7 +1266,7 @@
       ],
       "note": "グランピング",
       "memo": "グランピングの券。優待で「泊まる」が来るのは珍しい。",
-      "url": "https://www.kabuyutai.com/kobetu/izu-sr.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6819"
     },
     {
       "code": "6820",
@@ -1281,7 +1281,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/icom.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6820"
     },
     {
       "code": "6942",
@@ -1298,7 +1298,7 @@
         "12月"
       ],
       "note": "キルフェボンのギフトカード",
-      "url": "https://www.kabuyutai.com/kobetu/sophia.html"
+      "url": "https://kabutan.jp/stock/yutai?code=6942"
     },
     {
       "code": "7127",
@@ -1315,22 +1315,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/ikka-holdings.html"
-    },
-    {
-      "code": "7164",
-      "name": "全国保証",
-      "cat": "QUOカード",
-      "value": 5000,
-      "cond": "",
-      "fix": [
-        "3月"
-      ],
-      "arrive": [
-        "6月"
-      ],
-      "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/zenkoku.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7127"
     },
     {
       "code": "7196",
@@ -1345,7 +1330,7 @@
         "10月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/casa-inc.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7196"
     },
     {
       "code": "7267",
@@ -1360,7 +1345,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/honda.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7267"
     },
     {
       "code": "7272",
@@ -1375,7 +1360,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/yamaha-motor.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7272"
     },
     {
       "code": "7277",
@@ -1390,7 +1375,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/tbk-jp.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7277"
     },
     {
       "code": "7327",
@@ -1405,7 +1390,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/dhfg.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7327"
     },
     {
       "code": "7337",
@@ -1420,7 +1405,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/hirogin.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7337"
     },
     {
       "code": "7347",
@@ -1435,7 +1420,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/mercuria.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7347"
     },
     {
       "code": "7384",
@@ -1450,7 +1435,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/procrea-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7384"
     },
     {
       "code": "7388",
@@ -1467,7 +1452,7 @@
         "8月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/fpp.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7388"
     },
     {
       "code": "7416",
@@ -1482,7 +1467,7 @@
         "6月"
       ],
       "note": "Yシャツ",
-      "url": "https://www.kabuyutai.com/kobetu/haruyama.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7416"
     },
     {
       "code": "7513",
@@ -1499,7 +1484,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/kojima.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7513"
     },
     {
       "code": "7539",
@@ -1514,7 +1499,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/ainavo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7539"
     },
     {
       "code": "7613",
@@ -1529,7 +1514,7 @@
         "3月"
       ],
       "note": "抽選で海外旅行",
-      "url": "https://www.kabuyutai.com/kobetu/siix.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7613"
     },
     {
       "code": "7840",
@@ -1545,7 +1530,7 @@
       ],
       "note": "寝具",
       "memo": "寝具。毎日使うものが優待で届くという、いちばん地味で効くやつ。",
-      "url": "https://www.kabuyutai.com/kobetu/francebed-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7840"
     },
     {
       "code": "7885",
@@ -1560,7 +1545,7 @@
         "12月"
       ],
       "note": "お菓子",
-      "url": "https://www.kabuyutai.com/kobetu/takano-net.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7885"
     },
     {
       "code": "7918",
@@ -1575,7 +1560,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/via-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7918"
     },
     {
       "code": "7975",
@@ -1590,7 +1575,7 @@
         "5月"
       ],
       "note": "自社製品",
-      "url": "https://www.kabuyutai.com/kobetu/lihit-lab.html"
+      "url": "https://kabutan.jp/stock/yutai?code=7975"
     },
     {
       "code": "8013",
@@ -1605,7 +1590,7 @@
         "4月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/naigai.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8013"
     },
     {
       "code": "8029",
@@ -1620,7 +1605,7 @@
         "3月"
       ],
       "note": "自社商品",
-      "url": "https://www.kabuyutai.com/kobetu/look-holdings.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8029"
     },
     {
       "code": "8136",
@@ -1638,7 +1623,7 @@
       ],
       "note": "優待入場券",
       "memo": "優待入場券。使う前からもう楽しい部類。",
-      "url": "https://www.kabuyutai.com/kobetu/sanrio.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8136"
     },
     {
       "code": "8207",
@@ -1655,7 +1640,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/teng.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8207"
     },
     {
       "code": "8214",
@@ -1672,7 +1657,7 @@
         "12月"
       ],
       "note": "20%割引",
-      "url": "https://www.kabuyutai.com/kobetu/aoki-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8214"
     },
     {
       "code": "8267",
@@ -1689,7 +1674,7 @@
         "11月"
       ],
       "note": "オーナーズカード",
-      "url": "https://www.kabuyutai.com/kobetu/aeon.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8267"
     },
     {
       "code": "8285",
@@ -1704,7 +1689,7 @@
         "6月"
       ],
       "note": "磁器",
-      "url": "https://www.kabuyutai.com/kobetu/mitani.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8285"
     },
     {
       "code": "8346",
@@ -1719,7 +1704,7 @@
         "6月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/tohobank.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8346"
     },
     {
       "code": "8566",
@@ -1734,7 +1719,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/r-lease.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8566"
     },
     {
       "code": "8783",
@@ -1749,7 +1734,7 @@
         "11月"
       ],
       "note": "焼き肉・宿泊券",
-      "url": "https://www.kabuyutai.com/kobetu/gfa.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8783"
     },
     {
       "code": "8841",
@@ -1765,7 +1750,7 @@
       ],
       "note": "浅草ROXまつり湯",
       "memo": "浅草ROXまつり湯。行き先が決まっている券は、予定を立てる口実になる。",
-      "url": "https://www.kabuyutai.com/kobetu/toc.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8841"
     },
     {
       "code": "8876",
@@ -1780,7 +1765,7 @@
         "6月"
       ],
       "note": "株主優待Club Off",
-      "url": "https://www.kabuyutai.com/kobetu/relo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8876"
     },
     {
       "code": "8881",
@@ -1795,7 +1780,7 @@
         "6月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/nisshin-hd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=8881"
     },
     {
       "code": "9160",
@@ -1810,7 +1795,7 @@
         "3月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/novarese.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9160"
     },
     {
       "code": "9166",
@@ -1827,7 +1812,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/genda.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9166"
     },
     {
       "code": "9215",
@@ -1842,7 +1827,7 @@
         "2月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/casy.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9215"
     },
     {
       "code": "9251",
@@ -1857,7 +1842,7 @@
         "1月"
       ],
       "note": "ヘアケア商品",
-      "url": "https://www.kabuyutai.com/kobetu/ab-company.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9251"
     },
     {
       "code": "9347",
@@ -1874,7 +1859,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/nkanzaihd.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9347"
     },
     {
       "code": "9418",
@@ -1891,7 +1876,7 @@
         "11月"
       ],
       "note": "U-NEXT 90日分",
-      "url": "https://www.kabuyutai.com/kobetu/unext.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9418"
     },
     {
       "code": "9432",
@@ -1906,7 +1891,7 @@
         "6月"
       ],
       "note": "dポイント",
-      "url": "https://www.kabuyutai.com/kobetu/ntt.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9432"
     },
     {
       "code": "9433",
@@ -1921,7 +1906,7 @@
         "6月"
       ],
       "note": "Pontaポイント",
-      "url": "https://www.kabuyutai.com/kobetu/kddi.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9433"
     },
     {
       "code": "9436",
@@ -1936,7 +1921,7 @@
         "6月"
       ],
       "note": "Pontaポイント",
-      "url": "https://www.kabuyutai.com/kobetu/okinawa_cellular.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9436"
     },
     {
       "code": "9633",
@@ -1953,7 +1938,7 @@
         "12月"
       ],
       "note": "映画券",
-      "url": "https://www.kabuyutai.com/kobetu/theatres.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9633"
     },
     {
       "code": "9955",
@@ -1969,7 +1954,7 @@
       ],
       "note": "うなぎ",
       "memo": "三月に権利が確定して、六月にうなぎが届く。夏の入口の合図みたいになっている。",
-      "url": "https://www.kabuyutai.com/kobetu/yonkyu.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9955"
     },
     {
       "code": "9979",
@@ -1986,7 +1971,7 @@
         "11月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/daisyo.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9979"
     },
     {
       "code": "9997",
@@ -2003,7 +1988,7 @@
         "12月"
       ],
       "note": "",
-      "url": "https://www.kabuyutai.com/kobetu/belluna.html"
+      "url": "https://kabutan.jp/stock/yutai?code=9997"
     }
   ]
 }
