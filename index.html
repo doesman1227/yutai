@@ -100,13 +100,24 @@
   .use .ut b{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em}
   .use .uen{font-size:.6rem;letter-spacing:.18em;color:var(--faint)}
   .use .uh .n{margin-left:auto;font-size:.68rem;letter-spacing:.12em;color:var(--faint);flex:0 0 auto}
-  .use .ud{margin:11px 0 0;font-size:.82rem;color:var(--muted);line-height:1.8}
-  /* 社名はただ並べる。区切りは読点。社名自体が「・」を含むので中黒では切れ目が分からない */
-  .use .names{margin:12px 0 0;padding:11px 0 0;border-top:1px solid var(--line);
-    font-size:.8rem;line-height:1.95}
-  .use .names .un + .un::before{content:"、";color:var(--faint)}
+  /* 細目は左の列に揃える。.sub を display:contents にして、dt と dd を
+     そのまま dl のグリッドに流し込むと、カードごとに左の列幅が揃う */
+  .use .subs{margin:13px 0 0;padding:12px 0 0;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:max-content 1fr;gap:8px 14px}
+  .use .sub{display:contents}
+  .use dt{font-size:.76rem;color:var(--accent);letter-spacing:.02em;line-height:1.8;white-space:nowrap}
+  .use dd{margin:0;font-size:.8rem;line-height:1.8}
+  /* 社名の区切りは読点。社名自体が「・」を含むので中黒では切れ目が分からない */
+  .use dd .un + .un::before{content:"、";color:var(--faint)}
   /* ここは横に流すだけなので、短い社名まで途中で折る必要はない */
-  .use .names a.kb{overflow-wrap:break-word}
+  .use dd a.kb{overflow-wrap:break-word}
+  /* 幅が狭いと二列では細目名が潰れるので、細目名を上に積む */
+  @media (max-width:430px){
+    .use .subs{grid-template-columns:1fr;gap:2px}
+    .use dd{margin:0 0 9px}
+    .use dd:last-child{margin:0}
+  }
+  .aside{margin:18px 0 0;font-size:.76rem;color:var(--faint);line-height:1.85}
 
   /* 届く月 */
   .month{border-top:1px solid var(--line);padding:16px 0}
@@ -234,9 +245,6 @@
     <circle cx="12" cy="10.2" r="6.3"/><circle cx="12" cy="10.2" r="1.5"/>
     <path d="M12 3.9v12.6M5.7 10.2h12.6M7.5 5.7l9 9M16.5 5.7l-9 9"/>
     <path d="M8.8 20.6h6.4"/></symbol>
-  <symbol id="ic-coin" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="8.4"/>
-    <path d="M8.9 8.3 12 12.4l3.1-4.1"/><path d="M9.3 13h5.4M9.3 15.3h5.4M12 12.4V17.2"/></symbol>
   <symbol id="ic-info" viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="8.6"/><path d="M12 11.4v5M12 7.8h.01"/></symbol>
 </defs></svg>
@@ -266,9 +274,10 @@
 
   <section id="life">
     <div class="cat-h"><svg class="ic"><use href="#ic-sun"/></svg><h2>暮らしのどこで使うか</h2>
-      <span class="en">LIFE</span><span class="n" data-count="all"></span></div>
+      <span class="en">LIFE</span><span class="n" data-count="uses"></span></div>
     <div class="cat-rule"></div>
     <div class="uses" data-uses><p class="empty">読み込み中…</p></div>
+    <p class="aside" data-left></p>
   </section>
 
   <section id="calendar">
@@ -339,20 +348,24 @@ function pickCard(it){
 
 // 暮らしの領域ごとのアイコン。
 const USE_ICONS = {
-  "外食と出前":"shop", "食卓":"meal", "家のなか":"home", "着るもの":"shirt", "買い物":"bag",
-  "通信とサブスク":"wifi", "おふろと旅":"bath", "遊び":"wheel", "なんにでも":"coin",
+  "外食と出前":"shop", "食卓":"meal", "家のなか":"home", "着るもの":"shirt",
+  "買い物":"bag", "通信とサブスク":"wifi", "おふろと旅":"bath", "遊び":"wheel",
 };
 
 function useCard(u, list){
-  const names = list.map(it => `<span class="un">${nameLink(it)}</span>`).join("");
+  const rows = u.subs.map(name => {
+    const got = list.filter(it => it.sub === name);
+    if (!got.length) return "";
+    const names = got.map(it => `<span class="un">${nameLink(it)}</span>`).join("");
+    return `<div class="sub"><dt>${esc(name)}</dt><dd>${names}</dd></div>`;
+  }).join("");
   return `<div class="use">
     <div class="uh">
-      <span class="badge"><svg class="ic" aria-hidden="true"><use href="#ic-${USE_ICONS[u.name] || "coin"}"/></svg></span>
+      <span class="badge"><svg class="ic" aria-hidden="true"><use href="#ic-${USE_ICONS[u.name] || "shop"}"/></svg></span>
       <span class="ut"><b>${esc(u.name)}</b><span class="uen">${esc(u.en)}</span></span>
       <span class="n">${list.length}件</span>
     </div>
-    <p class="ud">${esc(u.desc)}</p>
-    <p class="names">${names}</p>
+    <dl class="subs">${rows}</dl>
   </div>`;
 }
 
@@ -396,9 +409,16 @@ function render(data){
 
   // 暮らしのどこで使うか
   const uses = data.uses || [];
+  const placed = items.filter(it => it.use);
   document.querySelector("[data-uses]").innerHTML = uses.length
-    ? uses.map(u => useCard(u, items.filter(it => it.use === u.name).sort(byName))).join("")
+    ? uses.map(u => useCard(u, placed.filter(it => it.use === u.name).sort(byName))).join("")
     : `<p class="empty">まだありません。</p>`;
+
+  // 残りがどこへ行ったのかは、黙って消すより書いておく
+  const left = items.length - placed.length;
+  document.querySelector("[data-left]").textContent = left
+    ? `残り${left}件は、QUOカード・デジタルギフト・優待ポイント・総合カタログギフト。`
+      + `暮らしのどこに効くとも言えないので、ここには出していません。` : "";
 
   // 届く月
   const months = data.months || [];
@@ -420,7 +440,7 @@ function render(data){
 
   document.querySelectorAll("[data-count]").forEach(el => {
     const k = el.dataset.count;
-    const n = k === "picks" ? picks.length : items.length;
+    const n = k === "picks" ? picks.length : k === "uses" ? placed.length : items.length;
     el.textContent = n ? n + "件" : "";
   });
 }

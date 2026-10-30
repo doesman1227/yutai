@@ -13,56 +13,121 @@
     {
       "name": "外食と出前",
       "en": "EATING OUT",
-      "desc": "うなぎ・ふぐ・たこ焼き・ステーキ・ラーメン・居酒屋・カフェ。宅配の寿司も。",
+      "subs": [
+        "うなぎ",
+        "ふぐ",
+        "たこ焼き",
+        "ステーキ",
+        "ラーメン",
+        "居酒屋",
+        "カフェ",
+        "定食と洋食",
+        "いろいろな店",
+        "宅配の寿司"
+      ],
       "n": 17
     },
     {
       "name": "食卓",
       "en": "TABLE",
-      "desc": "缶詰・きのこ・かまぼこ・漬物・お米・お肉・お菓子・新茶・りんごジュース・日本酒・調味料。",
-      "n": 26
+      "subs": [
+        "うなぎ",
+        "魚とかまぼこ",
+        "きのこ",
+        "お肉とお米",
+        "漬物",
+        "調味料",
+        "日本酒",
+        "飲みもの",
+        "カップ麺",
+        "お菓子",
+        "地元の特産品",
+        "産直の食材",
+        "グルメカタログ",
+        "食品いろいろ"
+      ],
+      "n": 27
     },
     {
       "name": "家のなか",
       "en": "HOUSEHOLD",
-      "desc": "歯みがき・タオル・寝具・磁器・文具・防災グッズ・ヘアケア。家事を頼む券も。",
+      "subs": [
+        "タオルと食器",
+        "寝具",
+        "歯みがき",
+        "ヘアケア",
+        "文具",
+        "防災グッズ",
+        "スマホまわり",
+        "家事代行",
+        "日用品いろいろ"
+      ],
       "n": 11
     },
     {
       "name": "着るもの",
       "en": "CLOTHES",
-      "desc": "靴下・シャツ・スーツ・メガネ・着物。",
+      "subs": [
+        "靴下",
+        "スーツ",
+        "服",
+        "メガネ",
+        "着物",
+        "革小物"
+      ],
       "n": 10
     },
     {
       "name": "買い物",
       "en": "SHOPPING",
-      "desc": "家電量販店・ホームセンター・スーパー・通販で使えるもの。",
+      "subs": [
+        "家電",
+        "ホームセンター",
+        "スーパー",
+        "通販"
+      ],
       "n": 7
     },
     {
       "name": "通信とサブスク",
       "en": "SUBSCRIPTIONS",
-      "desc": "携帯の回線・動画・電子書籍・学び・天気・乗換案内・家計簿。",
+      "subs": [
+        "携帯の回線",
+        "動画と本",
+        "学び",
+        "レシピ",
+        "天気",
+        "乗換案内",
+        "家計簿",
+        "住まい探し",
+        "仕事の道具"
+      ],
       "n": 12
     },
     {
       "name": "おふろと旅",
       "en": "BATH & TRAVEL",
-      "desc": "温泉・スーパー銭湯・熱海の宿・ホテル。",
+      "subs": [
+        "スーパー銭湯",
+        "宿",
+        "宿とレジャー"
+      ],
       "n": 7
     },
     {
       "name": "遊び",
       "en": "FUN",
-      "desc": "遊園地・映画・ゲームセンター・カラオケ・ジム・工場見学。",
-      "n": 8
-    },
-    {
-      "name": "なんにでも",
-      "en": "ANYTHING",
-      "desc": "QUOカード・デジタルギフト・総合カタログ・優待ポイント。使い道を選ばないもの。",
-      "n": 28
+      "subs": [
+        "遊園地",
+        "動物園",
+        "映画",
+        "ゲームセンター",
+        "カラオケ",
+        "ジム",
+        "ゴルフ",
+        "工場見学"
+      ],
+      "n": 10
     }
   ],
   "months": [
@@ -94,7 +159,8 @@
       ],
       "note": "自社サービス1ヶ月分",
       "url": "https://www.kabuyutai.com/kobetu/schoo.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "学び"
     },
     {
       "code": "299A",
@@ -110,7 +176,8 @@
       ],
       "note": "自社サービス無料券",
       "url": "https://www.kabuyutai.com/kobetu/kurashiru.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "レシピ"
     },
     {
       "code": "545A",
@@ -125,8 +192,7 @@
         "12月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/toranvia.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/toranvia.html"
     },
     {
       "code": "559A",
@@ -142,7 +208,8 @@
       ],
       "note": "自社商品券",
       "url": "https://www.kabuyutai.com/kobetu/umenoyado.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "日本酒"
     },
     {
       "code": "1301",
@@ -158,7 +225,8 @@
       ],
       "note": "缶詰",
       "url": "https://www.kabuyutai.com/kobetu/kyokuyo.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "魚とかまぼこ"
     },
     {
       "code": "1375",
@@ -174,7 +242,8 @@
       ],
       "note": "きのこ",
       "url": "https://www.kabuyutai.com/kobetu/maitake.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "きのこ"
     },
     {
       "code": "1780",
@@ -190,7 +259,8 @@
       ],
       "note": "地域の特産品",
       "url": "https://www.kabuyutai.com/kobetu/yamaura.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "地元の特産品"
     },
     {
       "code": "1848",
@@ -205,8 +275,7 @@
         "12月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/fujips.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/fujips.html"
     },
     {
       "code": "1965",
@@ -222,7 +291,8 @@
       ],
       "note": "お茶",
       "url": "https://www.kabuyutai.com/kobetu/techno-ryowa.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "飲みもの"
     },
     {
       "code": "2198",
@@ -238,7 +308,8 @@
       ],
       "note": "お菓子",
       "url": "https://www.kabuyutai.com/kobetu/ikk-grp.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "お菓子"
     },
     {
       "code": "2222",
@@ -254,7 +325,8 @@
       ],
       "note": "お菓子",
       "url": "https://www.kabuyutai.com/kobetu/kotobukispirits.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "お菓子"
     },
     {
       "code": "2267",
@@ -272,7 +344,8 @@
       ],
       "note": "自社商品詰め合わせ",
       "url": "https://www.kabuyutai.com/kobetu/yakult.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "飲みもの"
     },
     {
       "code": "2340",
@@ -289,7 +362,8 @@
       "note": "温泉の無料入浴券(電子化)",
       "memo": "らくスパで使えるサービス券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/gokurakuyu-holdings.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "スーパー銭湯"
     },
     {
       "code": "2404",
@@ -305,7 +379,8 @@
       ],
       "note": "食事券",
       "url": "https://www.kabuyutai.com/kobetu/tetsujin.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "カラオケ"
     },
     {
       "code": "2493",
@@ -321,7 +396,8 @@
       ],
       "note": "青森産100%リンゴジュース×3",
       "url": "https://www.kabuyutai.com/kobetu/e-supportlink.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "飲みもの"
     },
     {
       "code": "2668",
@@ -337,7 +413,8 @@
       ],
       "note": "買い物優待ポイント",
       "url": "https://www.kabuyutai.com/kobetu/tabio.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "靴下"
     },
     {
       "code": "2722",
@@ -353,7 +430,8 @@
       ],
       "note": "自社商品",
       "url": "https://www.kabuyutai.com/kobetu/ai-kei.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "日用品いろいろ"
     },
     {
       "code": "2730",
@@ -369,7 +447,8 @@
       ],
       "note": "ギフトカード",
       "url": "https://www.kabuyutai.com/kobetu/edion.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "家電"
     },
     {
       "code": "2735",
@@ -385,7 +464,8 @@
       ],
       "note": "防災グッズ",
       "url": "https://www.kabuyutai.com/kobetu/watts-jp.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "防災グッズ"
     },
     {
       "code": "2752",
@@ -403,7 +483,8 @@
       ],
       "note": "食事券もしくは食品",
       "url": "https://www.kabuyutai.com/kobetu/fujiofood.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "定食と洋食"
     },
     {
       "code": "2796",
@@ -419,7 +500,8 @@
       ],
       "note": "歯磨き粉",
       "url": "https://www.kabuyutai.com/kobetu/pharmarise.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "歯みがき"
     },
     {
       "code": "2897",
@@ -435,7 +517,8 @@
       ],
       "note": "自社グループ製品の詰め合わせ",
       "url": "https://www.kabuyutai.com/kobetu/nissin.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "カップ麺"
     },
     {
       "code": "2904",
@@ -451,7 +534,8 @@
       ],
       "note": "かまぼこ",
       "url": "https://www.kabuyutai.com/kobetu/ichimasa.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "魚とかまぼこ"
     },
     {
       "code": "2928",
@@ -467,7 +551,8 @@
       ],
       "note": "chocoZapの半額券など",
       "url": "https://www.kabuyutai.com/kobetu/rizapgroup.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "ジム"
     },
     {
       "code": "2935",
@@ -483,7 +568,8 @@
       ],
       "note": "自社商品詰め合わせ",
       "url": "https://www.kabuyutai.com/kobetu/pickles.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "漬物"
     },
     {
       "code": "2937",
@@ -499,7 +585,8 @@
       ],
       "note": "自社サービス券",
       "url": "https://www.kabuyutai.com/kobetu/stcousair.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "調味料"
     },
     {
       "code": "3003",
@@ -516,7 +603,8 @@
       "note": "カタログギフト",
       "memo": "カタログギフトが二冊もらえる。",
       "url": "https://www.kabuyutai.com/kobetu/hulic.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "グルメカタログ"
     },
     {
       "code": "3036",
@@ -531,8 +619,7 @@
         "6月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/alconix.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/alconix.html"
     },
     {
       "code": "3046",
@@ -548,7 +635,8 @@
       ],
       "note": "メガネの買い物優待券",
       "url": "https://www.kabuyutai.com/kobetu/jinsholdings.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "メガネ"
     },
     {
       "code": "3048",
@@ -567,7 +655,8 @@
       "note": "サービス券",
       "memo": "Appleギフトカードが買えるサービス券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/biccamera.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "家電"
     },
     {
       "code": "3053",
@@ -585,7 +674,8 @@
       ],
       "note": "食事券",
       "url": "https://www.kabuyutai.com/kobetu/pepper-fs.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "ステーキ"
     },
     {
       "code": "3063",
@@ -603,7 +693,8 @@
       ],
       "note": "うなぎ",
       "url": "https://www.kabuyutai.com/kobetu/jgroup.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "うなぎ"
     },
     {
       "code": "3082",
@@ -621,7 +712,8 @@
       ],
       "note": "食事割引券",
       "url": "https://www.kabuyutai.com/kobetu/kichiri.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "定食と洋食"
     },
     {
       "code": "3134",
@@ -639,7 +731,8 @@
       ],
       "note": "自社サービス券",
       "url": "https://www.kabuyutai.com/kobetu/hamee.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "スマホまわり"
     },
     {
       "code": "3154",
@@ -654,8 +747,7 @@
         "9月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/medius.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/medius.html"
     },
     {
       "code": "3167",
@@ -674,7 +766,8 @@
       "note": "QUOカード・水・通信割引から選ぶ",
       "memo": "SIM割引券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/tokaiholdings.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "携帯の回線"
     },
     {
       "code": "3169",
@@ -691,7 +784,8 @@
       "note": "磁器",
       "memo": "毎年、スタイリッシュな食器が届く。",
       "url": "https://www.kabuyutai.com/kobetu/unico-fan.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "タオルと食器"
     },
     {
       "code": "3191",
@@ -707,7 +801,8 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/joyfulhonda.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "ホームセンター"
     },
     {
       "code": "3196",
@@ -725,7 +820,8 @@
       ],
       "note": "たこ焼き",
       "url": "https://www.kabuyutai.com/kobetu/hotland.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "たこ焼き"
     },
     {
       "code": "3199",
@@ -741,7 +837,8 @@
       ],
       "note": "オリジナル製品",
       "url": "https://www.kabuyutai.com/kobetu/watahan.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "地元の特産品"
     },
     {
       "code": "3222",
@@ -759,7 +856,8 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/usmh.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "スーパー"
     },
     {
       "code": "3291",
@@ -775,7 +873,8 @@
       ],
       "note": "温浴施設",
       "url": "https://www.kabuyutai.com/kobetu/ighd.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "スーパー銭湯"
     },
     {
       "code": "3320",
@@ -791,7 +890,8 @@
       ],
       "note": "買い物割引クーポン",
       "url": "https://www.kabuyutai.com/kobetu/crossplus.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "服"
     },
     {
       "code": "3372",
@@ -809,7 +909,8 @@
       ],
       "note": "ふぐ割引券",
       "url": "https://www.kabuyutai.com/kobetu/kanmonkai.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "ふぐ"
     },
     {
       "code": "3387",
@@ -828,7 +929,8 @@
       "note": "お食事券",
       "memo": "いろんなお店で使える食事券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/createrestaurants.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "いろいろな店"
     },
     {
       "code": "3395",
@@ -845,7 +947,8 @@
       "note": "割引カード",
       "memo": "サンマルクカフェで使える割引カードがもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/saint-marc-hd.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "カフェ"
     },
     {
       "code": "3415",
@@ -861,7 +964,8 @@
       ],
       "note": "買い物割引券",
       "url": "https://www.kabuyutai.com/kobetu/tokyobase.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "服"
     },
     {
       "code": "3474",
@@ -878,7 +982,8 @@
       "note": "うなぎ",
       "memo": "秋葉原でひつまぶしが食べられる。",
       "url": "https://www.kabuyutai.com/kobetu/g-fac.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "うなぎ"
     },
     {
       "code": "3479",
@@ -895,7 +1000,8 @@
       "note": "食事・宿泊券",
       "memo": "鉄板焼や宿泊で使えるサービス券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/tkp.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "宿"
     },
     {
       "code": "3521",
@@ -912,7 +1018,8 @@
       "note": "温浴施設の優待券",
       "memo": "テルマー湯の無料券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/econach.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "スーパー銭湯"
     },
     {
       "code": "3539",
@@ -928,7 +1035,8 @@
       ],
       "note": "お肉",
       "url": "https://www.kabuyutai.com/kobetu/jm-holdings.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "お肉とお米"
     },
     {
       "code": "3543",
@@ -947,7 +1055,8 @@
       "note": "KOMECAへのチャージ",
       "memo": "コメカがもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/komeda-holdings.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "カフェ"
     },
     {
       "code": "3557",
@@ -965,7 +1074,8 @@
       ],
       "note": "食事優待券",
       "url": "https://www.kabuyutai.com/kobetu/united-collective.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "3561",
@@ -983,7 +1093,8 @@
       ],
       "note": "優待カード",
       "url": "https://www.kabuyutai.com/kobetu/chikaranomoto.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "ラーメン"
     },
     {
       "code": "3612",
@@ -1001,7 +1112,8 @@
       ],
       "note": "買い物優待券",
       "url": "https://www.kabuyutai.com/kobetu/world.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "服"
     },
     {
       "code": "3641",
@@ -1017,7 +1129,8 @@
       ],
       "note": "Rentaポイント",
       "url": "https://www.kabuyutai.com/kobetu/papy.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "動画と本"
     },
     {
       "code": "3645",
@@ -1032,8 +1145,7 @@
         "8月"
       ],
       "note": "デジタルギフト",
-      "url": "https://www.kabuyutai.com/kobetu/medical-net.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/medical-net.html"
     },
     {
       "code": "3710",
@@ -1051,7 +1163,8 @@
       ],
       "note": "サービス利用",
       "url": "https://www.kabuyutai.com/kobetu/jorudan.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "乗換案内"
     },
     {
       "code": "3939",
@@ -1067,7 +1180,8 @@
       ],
       "note": "QUOカード",
       "url": "https://www.kabuyutai.com/kobetu/kanamic.html",
-      "use": "なんにでも"
+      "use": "遊び",
+      "sub": "ジム"
     },
     {
       "code": "3943",
@@ -1082,8 +1196,7 @@
         "6月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/osk.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/osk.html"
     },
     {
       "code": "3987",
@@ -1099,7 +1212,8 @@
       ],
       "note": "クーポン",
       "url": "https://www.kabuyutai.com/kobetu/ecomott.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "お菓子"
     },
     {
       "code": "4376",
@@ -1115,7 +1229,8 @@
       ],
       "note": "自社サービスの利用チケット",
       "url": "https://www.kabuyutai.com/kobetu/kufu.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "家計簿"
     },
     {
       "code": "4661",
@@ -1131,7 +1246,8 @@
       ],
       "note": "1日パスポート券",
       "url": "https://www.kabuyutai.com/kobetu/olc.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "遊園地"
     },
     {
       "code": "4755",
@@ -1148,7 +1264,8 @@
       "note": "通信料",
       "memo": "SIM一年分がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/rakuten.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "携帯の回線"
     },
     {
       "code": "4765",
@@ -1163,8 +1280,7 @@
         "6月"
       ],
       "note": "仮想通貨・株式新聞",
-      "url": "https://www.kabuyutai.com/kobetu/morningstar.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/morningstar.html"
     },
     {
       "code": "4825",
@@ -1183,7 +1299,8 @@
       "note": "ウェザーニュースの有料会員権",
       "memo": "有料会員が無料で使える。",
       "url": "https://www.kabuyutai.com/kobetu/weathernews.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "天気"
     },
     {
       "code": "5025",
@@ -1201,7 +1318,8 @@
       ],
       "note": "自社サービスのクーポン",
       "url": "https://www.kabuyutai.com/kobetu/mcury.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "住まい探し"
     },
     {
       "code": "5261",
@@ -1217,7 +1335,8 @@
       ],
       "note": "ホテル券",
       "url": "https://www.kabuyutai.com/kobetu/resol.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "宿"
     },
     {
       "code": "5301",
@@ -1233,7 +1352,8 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/tokaicarbon.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "グルメカタログ"
     },
     {
       "code": "5616",
@@ -1249,7 +1369,8 @@
       ],
       "note": "ECサイトの優待クーポン",
       "url": "https://www.kabuyutai.com/kobetu/ame-kaze-taiyo.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "産直の食材"
     },
     {
       "code": "5949",
@@ -1264,8 +1385,7 @@
         "6月"
       ],
       "note": "優待ポイント",
-      "url": "https://www.kabuyutai.com/kobetu/unipres.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/unipres.html"
     },
     {
       "code": "6082",
@@ -1281,7 +1401,8 @@
       ],
       "note": "サービス券",
       "url": "https://www.kabuyutai.com/kobetu/rideonexpresshd.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "宅配の寿司"
     },
     {
       "code": "6089",
@@ -1296,8 +1417,7 @@
         "6月"
       ],
       "note": "プレミアム優待倶楽部の優待ポイント",
-      "url": "https://www.kabuyutai.com/kobetu/willgroup.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/willgroup.html"
     },
     {
       "code": "6182",
@@ -1313,7 +1433,8 @@
       ],
       "note": "自社サービス券",
       "url": "https://www.kabuyutai.com/kobetu/metareal.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "学び"
     },
     {
       "code": "6186",
@@ -1329,7 +1450,8 @@
       ],
       "note": "自社グループの優待券",
       "url": "https://www.kabuyutai.com/kobetu/ichikura.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "着物"
     },
     {
       "code": "6286",
@@ -1344,8 +1466,7 @@
         "6月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/seiko-co.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/seiko-co.html"
     },
     {
       "code": "6306",
@@ -1360,8 +1481,7 @@
         "6月"
       ],
       "note": "優待ポイント",
-      "url": "https://www.kabuyutai.com/kobetu/nikko-net.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/nikko-net.html"
     },
     {
       "code": "6580",
@@ -1377,7 +1497,8 @@
       ],
       "note": "Jシステム・JSaaSのサービス券",
       "url": "https://www.kabuyutai.com/kobetu/writeup.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "仕事の道具"
     },
     {
       "code": "6630",
@@ -1393,7 +1514,8 @@
       ],
       "note": "買い物割引券",
       "url": "https://www.kabuyutai.com/kobetu/ya-man.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "ヘアケア"
     },
     {
       "code": "6819",
@@ -1409,7 +1531,8 @@
       ],
       "note": "グランピング",
       "url": "https://www.kabuyutai.com/kobetu/izu-sr.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "動物園"
     },
     {
       "code": "6820",
@@ -1425,7 +1548,8 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/icom.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "グルメカタログ"
     },
     {
       "code": "6942",
@@ -1443,7 +1567,8 @@
       ],
       "note": "キルフェボンのギフトカード",
       "url": "https://www.kabuyutai.com/kobetu/sophia.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "お菓子"
     },
     {
       "code": "7127",
@@ -1461,7 +1586,8 @@
       ],
       "note": "食事優待券",
       "url": "https://www.kabuyutai.com/kobetu/ikka-holdings.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "7196",
@@ -1476,8 +1602,7 @@
         "10月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/casa-inc.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/casa-inc.html"
     },
     {
       "code": "7267",
@@ -1493,7 +1618,8 @@
       ],
       "note": "イベント・見学会の招待",
       "url": "https://www.kabuyutai.com/kobetu/honda.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "工場見学"
     },
     {
       "code": "7272",
@@ -1508,8 +1634,7 @@
         "3月"
       ],
       "note": "優待ポイント",
-      "url": "https://www.kabuyutai.com/kobetu/yamaha-motor.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/yamaha-motor.html"
     },
     {
       "code": "7277",
@@ -1525,7 +1650,8 @@
       ],
       "note": "東北のブランド米かQUOカード",
       "url": "https://www.kabuyutai.com/kobetu/tbk-jp.html",
-      "use": "なんにでも"
+      "use": "食卓",
+      "sub": "お肉とお米"
     },
     {
       "code": "7327",
@@ -1541,7 +1667,8 @@
       ],
       "note": "新潟の特産品カタログ",
       "url": "https://www.kabuyutai.com/kobetu/dhfg.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "地元の特産品"
     },
     {
       "code": "7337",
@@ -1556,8 +1683,7 @@
         "6月"
       ],
       "note": "ギフトカードなど",
-      "url": "https://www.kabuyutai.com/kobetu/hirogin.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/hirogin.html"
     },
     {
       "code": "7347",
@@ -1572,8 +1698,7 @@
         "3月"
       ],
       "note": "QUOカード",
-      "url": "https://www.kabuyutai.com/kobetu/mercuria.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/mercuria.html"
     },
     {
       "code": "7384",
@@ -1589,7 +1714,8 @@
       ],
       "note": "地元の特産品",
       "url": "https://www.kabuyutai.com/kobetu/procrea-hd.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "地元の特産品"
     },
     {
       "code": "7388",
@@ -1606,8 +1732,7 @@
         "8月"
       ],
       "note": "デジタルギフト",
-      "url": "https://www.kabuyutai.com/kobetu/fpp.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/fpp.html"
     },
     {
       "code": "7416",
@@ -1623,7 +1748,8 @@
       ],
       "note": "Yシャツ",
       "url": "https://www.kabuyutai.com/kobetu/haruyama.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "スーツ"
     },
     {
       "code": "7513",
@@ -1642,7 +1768,8 @@
       "note": "買い物優待券",
       "memo": "Appleギフトカードが買えるサービス券がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/kojima.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "家電"
     },
     {
       "code": "7539",
@@ -1658,8 +1785,7 @@
         "12月"
       ],
       "note": "デジタルギフト",
-      "url": "https://www.kabuyutai.com/kobetu/ainavo.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/ainavo.html"
     },
     {
       "code": "7613",
@@ -1674,8 +1800,7 @@
         "3月"
       ],
       "note": "抽選で海外旅行",
-      "url": "https://www.kabuyutai.com/kobetu/siix.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/siix.html"
     },
     {
       "code": "7840",
@@ -1691,7 +1816,8 @@
       ],
       "note": "寝具",
       "url": "https://www.kabuyutai.com/kobetu/francebed-hd.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "寝具"
     },
     {
       "code": "7885",
@@ -1707,7 +1833,8 @@
       ],
       "note": "お菓子",
       "url": "https://www.kabuyutai.com/kobetu/takano-net.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "食品いろいろ"
     },
     {
       "code": "7918",
@@ -1724,7 +1851,8 @@
       "note": "株主優待券",
       "memo": "千円ごとに使える五百円券を、大量にもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/via-hd.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "7975",
@@ -1740,7 +1868,8 @@
       ],
       "note": "自社製品",
       "url": "https://www.kabuyutai.com/kobetu/lihit-lab.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "文具"
     },
     {
       "code": "8013",
@@ -1756,7 +1885,8 @@
       ],
       "note": "オンラインショップのポイント",
       "url": "https://www.kabuyutai.com/kobetu/naigai.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "靴下"
     },
     {
       "code": "8029",
@@ -1772,7 +1902,8 @@
       ],
       "note": "自社商品",
       "url": "https://www.kabuyutai.com/kobetu/look-holdings.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "革小物"
     },
     {
       "code": "8136",
@@ -1790,7 +1921,8 @@
       ],
       "note": "優待入場券",
       "url": "https://www.kabuyutai.com/kobetu/sanrio.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "遊園地"
     },
     {
       "code": "8207",
@@ -1808,7 +1940,8 @@
       ],
       "note": "食事券",
       "url": "https://www.kabuyutai.com/kobetu/teng.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "8214",
@@ -1826,7 +1959,8 @@
       ],
       "note": "20%割引",
       "url": "https://www.kabuyutai.com/kobetu/aoki-hd.html",
-      "use": "着るもの"
+      "use": "着るもの",
+      "sub": "スーツ"
     },
     {
       "code": "8267",
@@ -1844,7 +1978,8 @@
       ],
       "note": "オーナーズカード",
       "url": "https://www.kabuyutai.com/kobetu/aeon.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "スーパー"
     },
     {
       "code": "8285",
@@ -1861,7 +1996,8 @@
       "note": "磁器",
       "memo": "高価でスタイリッシュな磁器がもらえる。",
       "url": "https://www.kabuyutai.com/kobetu/mitani.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "タオルと食器"
     },
     {
       "code": "8346",
@@ -1877,7 +2013,8 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/tohobank.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "グルメカタログ"
     },
     {
       "code": "8566",
@@ -1892,8 +2029,7 @@
         "6月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/r-lease.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/r-lease.html"
     },
     {
       "code": "8783",
@@ -1908,8 +2044,7 @@
         "11月"
       ],
       "note": "焼き肉・宿泊券",
-      "url": "https://www.kabuyutai.com/kobetu/gfa.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/gfa.html"
     },
     {
       "code": "8841",
@@ -1925,7 +2060,8 @@
       ],
       "note": "浅草ROXまつり湯",
       "url": "https://www.kabuyutai.com/kobetu/toc.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "スーパー銭湯"
     },
     {
       "code": "8876",
@@ -1941,7 +2077,8 @@
       ],
       "note": "株主優待Club Off",
       "url": "https://www.kabuyutai.com/kobetu/relo.html",
-      "use": "おふろと旅"
+      "use": "おふろと旅",
+      "sub": "宿とレジャー"
     },
     {
       "code": "8881",
@@ -1957,7 +2094,8 @@
       ],
       "note": "優待ポイント",
       "url": "https://www.kabuyutai.com/kobetu/nisshin-hd.html",
-      "use": "なんにでも"
+      "use": "遊び",
+      "sub": "ゴルフ"
     },
     {
       "code": "9160",
@@ -1972,8 +2110,7 @@
         "3月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/novarese.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/novarese.html"
     },
     {
       "code": "9166",
@@ -1991,7 +2128,8 @@
       ],
       "note": "グループ店のクーポン",
       "url": "https://www.kabuyutai.com/kobetu/genda.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "ゲームセンター"
     },
     {
       "code": "9215",
@@ -2007,7 +2145,8 @@
       ],
       "note": "家事代行の利用券",
       "url": "https://www.kabuyutai.com/kobetu/casy.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "家事代行"
     },
     {
       "code": "9251",
@@ -2024,7 +2163,8 @@
       "note": "ヘアケア商品",
       "memo": "ヘアケア商品が届く。",
       "url": "https://www.kabuyutai.com/kobetu/ab-company.html",
-      "use": "家のなか"
+      "use": "家のなか",
+      "sub": "ヘアケア"
     },
     {
       "code": "9347",
@@ -2041,8 +2181,7 @@
         "12月"
       ],
       "note": "カタログギフト",
-      "url": "https://www.kabuyutai.com/kobetu/nkanzaihd.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/nkanzaihd.html"
     },
     {
       "code": "9418",
@@ -2060,7 +2199,8 @@
       ],
       "note": "U-NEXT 90日分",
       "url": "https://www.kabuyutai.com/kobetu/unext.html",
-      "use": "通信とサブスク"
+      "use": "通信とサブスク",
+      "sub": "動画と本"
     },
     {
       "code": "9432",
@@ -2075,8 +2215,7 @@
         "6月"
       ],
       "note": "dポイント",
-      "url": "https://www.kabuyutai.com/kobetu/ntt.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/ntt.html"
     },
     {
       "code": "9433",
@@ -2091,8 +2230,7 @@
         "6月"
       ],
       "note": "Pontaポイント",
-      "url": "https://www.kabuyutai.com/kobetu/kddi.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/kddi.html"
     },
     {
       "code": "9436",
@@ -2107,8 +2245,7 @@
         "6月"
       ],
       "note": "Pontaポイント",
-      "url": "https://www.kabuyutai.com/kobetu/okinawa_cellular.html",
-      "use": "なんにでも"
+      "url": "https://www.kabuyutai.com/kobetu/okinawa_cellular.html"
     },
     {
       "code": "9633",
@@ -2126,7 +2263,8 @@
       ],
       "note": "映画券",
       "url": "https://www.kabuyutai.com/kobetu/theatres.html",
-      "use": "遊び"
+      "use": "遊び",
+      "sub": "映画"
     },
     {
       "code": "9955",
@@ -2144,7 +2282,8 @@
       "note": "うなぎ",
       "memo": "うなぎが届く。",
       "url": "https://www.kabuyutai.com/kobetu/yonkyu.html",
-      "use": "食卓"
+      "use": "食卓",
+      "sub": "うなぎ"
     },
     {
       "code": "9979",
@@ -2162,7 +2301,8 @@
       ],
       "note": "飲食券",
       "url": "https://www.kabuyutai.com/kobetu/daisyo.html",
-      "use": "外食と出前"
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "9997",
@@ -2180,7 +2320,8 @@
       ],
       "note": "通販の割引と自社商品",
       "url": "https://www.kabuyutai.com/kobetu/belluna.html",
-      "use": "買い物"
+      "use": "買い物",
+      "sub": "通販"
     }
   ]
 }
