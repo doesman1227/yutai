@@ -56,6 +56,23 @@ function useCard(u, list){
   </div>`;
 }
 
+// 欲しい優待のカード。まだ持っていないので、到着ではなく贈呈の月を書く。
+function wantCard(w){
+  const meta = [
+    w.fix.length ? "権利確定 " + w.fix.join("・") : "",
+    w.arrive.length ? "贈呈 " + w.arrive.join("・") : "",
+    w.value ? yen(w.value) + "相当" : "",
+  ].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("");
+  return `<div class="pick">
+    <div class="hd">
+      <span class="badge">${icon(w.cat, "")}</span>
+      <span class="ttl"><b>${nameLink(w)}</b><span class="code">${esc(w.code)}</span>
+        <span class="what">${esc(w.note)}</span></span>
+    </div>
+    <div class="meta">${meta}</div>
+  </div>`;
+}
+
 function monthBlock(month, list, max){
   const w = list.length ? Math.max(4, Math.round(list.length / max * 100)) : 0;
   const items = list.map(it => `<li><span>${icon(it.cat, "mi")}${nameLink(it)}</span>${
@@ -78,6 +95,12 @@ function render(data){
   const picks = items.filter(it => it.memo);
   const pickBox = document.querySelector("[data-picks]");
   if (pickBox) pickBox.innerHTML = picks.length ? picks.map(pickCard).join("")
+    : `<p class="empty">まだありません。</p>`;
+
+  // 欲しい優待
+  const wants = data.wants || [];
+  const wantBox = document.querySelector("[data-wants]");
+  if (wantBox) wantBox.innerHTML = wants.length ? wants.map(wantCard).join("")
     : `<p class="empty">まだありません。</p>`;
 
   // ジャンル別
@@ -104,7 +127,9 @@ function render(data){
 
   document.querySelectorAll("[data-count]").forEach(el => {
     const k = el.dataset.count;
-    const n = k === "picks" ? picks.length : k === "uses" ? placed.length : items.length;
+    const n = k === "picks" ? picks.length
+      : k === "wants" ? wants.length
+      : k === "uses" ? placed.length : items.length;
     el.textContent = n ? n + "件" : "";
   });
 }
@@ -119,6 +144,6 @@ openCaution();
 // 一度来た人のブラウザには古い items.json が残っている。ページだけ新しくなると
 // 形が噛み合わず全部が読み込み失敗になるので、毎回サーバーに確かめさせる。
 fetch("items.json", {cache: "no-cache"}).then(r => r.json()).then(render).catch(() => {
-  document.querySelectorAll("[data-picks],[data-uses],[data-calendar]").forEach(
+  document.querySelectorAll("[data-picks],[data-wants],[data-uses],[data-calendar]").forEach(
     el => el.innerHTML = `<p class="empty">データを読み込めませんでした。</p>`);
 });

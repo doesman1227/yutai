@@ -136,6 +136,155 @@
     "11月",
     "12月"
   ],
+  "wants": [
+    {
+      "code": "2157",
+      "name": "コシダカホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 2000,
+      "fix": [
+        "8月"
+      ],
+      "arrive": [
+        "11月"
+      ],
+      "note": "カラオケまねきねこで使える割引券",
+      "url": "https://www.kabuyutai.com/kobetu/koshidakaholdings.html"
+    },
+    {
+      "code": "3178",
+      "name": "チムニー",
+      "cat": "食事券・サービス券",
+      "value": 6000,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "はなの舞などグループ店の食事割引券",
+      "url": "https://www.kabuyutai.com/kobetu/chimney.html"
+    },
+    {
+      "code": "3198",
+      "name": "SFPホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 8000,
+      "fix": [
+        "2月",
+        "8月"
+      ],
+      "arrive": [
+        "5月",
+        "11月"
+      ],
+      "note": "味噌煮込みうどんや磯丸水産で使える食事券"
+    },
+    {
+      "code": "3418",
+      "name": "バルニバービ",
+      "cat": "食事券・サービス券",
+      "value": 3000,
+      "fix": [
+        "7月"
+      ],
+      "arrive": [
+        "10月"
+      ],
+      "note": "グループ店の食事割引券と、宿泊券が当たる抽選",
+      "url": "https://www.kabuyutai.com/kobetu/balnibarbi.html"
+    },
+    {
+      "code": "6339",
+      "name": "新東工業",
+      "cat": "QUOカード・ギフト券",
+      "value": 1000,
+      "fix": [
+        "9月"
+      ],
+      "arrive": [
+        "12月"
+      ],
+      "note": "QUOカード",
+      "url": "https://www.kabuyutai.com/kobetu/sinto.html"
+    },
+    {
+      "code": "7294",
+      "name": "ヨロズ",
+      "cat": "QUOカード・ギフト券",
+      "value": 1000,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "QUOカードかカタログギフト",
+      "url": "https://www.kabuyutai.com/kobetu/yorozu-corp.html"
+    },
+    {
+      "code": "7792",
+      "name": "コラントッテ",
+      "cat": "その他",
+      "value": 5000,
+      "fix": [
+        "9月"
+      ],
+      "arrive": [
+        "12月"
+      ],
+      "note": "自社ECサイトで使える買い物割引クーポン",
+      "url": "https://www.kabuyutai.com/kobetu/colantotte.html"
+    },
+    {
+      "code": "7893",
+      "name": "プロネクサス",
+      "cat": "QUOカード・ギフト券",
+      "value": 500,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "QUOカード",
+      "url": "https://www.kabuyutai.com/kobetu/pronexus.html"
+    },
+    {
+      "code": "8081",
+      "name": "カナデン",
+      "cat": "QUOカード・ギフト券",
+      "value": 1000,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "QUOカード",
+      "url": "https://www.kabuyutai.com/kobetu/kanaden.html"
+    },
+    {
+      "code": "8200",
+      "name": "リンガーハット",
+      "cat": "食事券・サービス券",
+      "value": 2750,
+      "fix": [
+        "2月",
+        "8月"
+      ],
+      "arrive": [
+        "5月",
+        "11月"
+      ],
+      "note": "リンガーハットで使える優待ポイント",
+      "url": "https://www.kabuyutai.com/kobetu/ringerhut.html"
+    }
+  ],
   "items": [
     {
       "code": "264A",

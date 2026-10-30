@@ -317,6 +317,26 @@ CAT_ORDER = [
     "QUOカード・ギフト券",
     "その他",
 ]
+# 欲しい優待。まだ持っていない、気になっている銘柄。元データは同じ
+# スプレッドシートの「購入候補」シート。向こうにある理論株価と株価差異は
+# 本人の見立てなので持ってこない。保有株数の欄も、買う規模の話なので出さない。
+# 中身は「楽しい株主優待＆配当」の銘柄ページで裏を取ったもの。SFPホールディングスは
+# 向こうに載っていないので、手元の記録のまま書いてページ名を空にしてある。
+# 区切りは | で、順番は
+# コード | 企業名 | 優待カテゴリ | 優待価値 | 権利確定月 | 贈呈月 | 中身 | ページ名
+WANTS = """
+2157|コシダカホールディングス|食事券・サービス券|2000|8月|11月|カラオケまねきねこで使える割引券|koshidakaholdings
+3178|チムニー|食事券・サービス券|6000|3月,9月|6月,12月|はなの舞などグループ店の食事割引券|chimney
+3198|SFPホールディングス|食事券・サービス券|8000|2月,8月|5月,11月|味噌煮込みうどんや磯丸水産で使える食事券|
+3418|バルニバービ|食事券・サービス券|3000|7月|10月|グループ店の食事割引券と、宿泊券が当たる抽選|balnibarbi
+6339|新東工業|QUOカード・ギフト券|1000|9月|12月|QUOカード|sinto
+7294|ヨロズ|QUOカード・ギフト券|1000|3月|6月|QUOカードかカタログギフト|yorozu-corp
+7792|コラントッテ|その他|5000|9月|12月|自社ECサイトで使える買い物割引クーポン|colantotte
+7893|プロネクサス|QUOカード・ギフト券|500|3月|6月|QUOカード|pronexus
+8081|カナデン|QUOカード・ギフト券|1000|3月,9月|6月,12月|QUOカード|kanaden
+8200|リンガーハット|食事券・サービス券|2750|2月,8月|5月,11月|リンガーハットで使える優待ポイント|ringerhut
+"""
+
 MONTHS = [f"{m}月" for m in range(1, 13)]
 
 # 暮らしのどこに効くか。CAT_ORDER が「もらえる物の形」で分けるのに対して、
@@ -482,12 +502,34 @@ def main():
     if nowhere:
         raise SystemExit(f"USES にも OUT にも無いコードがある: {nowhere}")
 
+    wants = []
+    for line in WANTS.strip().splitlines():
+        code, name, cat, value, fix, arrive, note, slug = line.split("|")
+        w = {"code": code, "name": name, "cat": cat,
+             "value": int(value) if value.strip() else None,
+             "fix": [m for m in fix.split(",") if m.strip()],
+             "arrive": [m for m in arrive.split(",") if m.strip()],
+             "note": note}
+        if slug.strip():
+            w["url"] = SITE.format(slug.strip())
+        wants.append(w)
+
+    # 持っている銘柄が「欲しい」に残っていると、読む人には何のことか分からない
+    held = [w["code"] for w in wants if w["code"] in by_code]
+    if held:
+        raise SystemExit(f"もう持っている銘柄が WANTS にある: {held}")
+
+    badw = [w["code"] for w in wants if any(m not in MONTHS for m in w["fix"] + w["arrive"])]
+    if badw:
+        raise SystemExit(f"WANTS の月の書き方が不正: {badw}")
+
     data = {
         "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。"
                 "更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
         "updated": date.today().isoformat(),
         "uses": uses,
         "months": MONTHS,
+        "wants": wants,
         "items": items,
     }
     out = Path(__file__).with_name("items.json")
