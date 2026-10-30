@@ -1,6 +1,6 @@
 // 株主優待のページ共通のスクリプト。index.html と picks.html が読む。
 // items.json を一度読んで、そのページにある描き込み先だけを埋める。
-// items.json を読んで、気に入っているもの・届く月・優待の種類の三通りに並べる。
+// items.json を読んで、お気に入り・ジャンル別・届く月に並べる。
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const yen = n => "¥" + Number(n).toLocaleString("ja-JP");
 // 社名は優待情報サイトの銘柄ページへ送る。対応ページが無いものは文字のまま。
@@ -70,20 +70,6 @@ function monthBlock(month, list, max){
   </div>`;
 }
 
-function kindRow(it){
-  const when = [
-    it.arrive.length ? it.arrive.join("・") + "に届く" : "",
-    it.fix.length ? "権利確定 " + it.fix.join("・") : "",
-  ].filter(Boolean).join(" / ");
-  return `<div class="row">
-    <span class="nm">${nameLink(it)}<span class="code">${esc(it.code)}</span>
-      ${it.note ? `<span class="w">${esc(it.note)}</span>` : ""}
-      ${it.cond ? `<span class="cd">${esc(it.cond)}</span>` : ""}
-    </span>
-    <span class="rt">${it.value ? `<span class="v">${esc(yen(it.value))}</span>` : `<span class="v">—</span>`}${esc(when)}</span>
-  </div>`;
-}
-
 function render(data){
   const items = data.items || [];
   const byName = (a, b) => a.code.localeCompare(b.code);
@@ -116,18 +102,6 @@ function render(data){
   const calBox = document.querySelector("[data-calendar]");
   if (calBox) calBox.innerHTML = perMonth.map(([m, l]) => monthBlock(m, l, max)).join("");
 
-  // 優待の種類
-  const order = data.catOrder || [];
-  const cats = order.filter(c => items.some(it => it.cat === c));
-  const kindBox = document.querySelector("[data-kinds]");
-  if (kindBox) kindBox.innerHTML = cats.map(c => {
-    const list = items.filter(it => it.cat === c).sort(byName);
-    return `<div class="cat-h kind-h">${icon(c, "")}<h3>${esc(c)}</h3>
-        <span class="n">${list.length}件</span>
-      </div>
-      <div class="rows">${list.map(kindRow).join("")}</div>`;
-  }).join("");
-
   document.querySelectorAll("[data-count]").forEach(el => {
     const k = el.dataset.count;
     const n = k === "picks" ? picks.length : k === "uses" ? placed.length : items.length;
@@ -145,6 +119,6 @@ openCaution();
 // 一度来た人のブラウザには古い items.json が残っている。ページだけ新しくなると
 // 形が噛み合わず全部が読み込み失敗になるので、毎回サーバーに確かめさせる。
 fetch("items.json", {cache: "no-cache"}).then(r => r.json()).then(render).catch(() => {
-  document.querySelectorAll("[data-picks],[data-uses],[data-calendar],[data-kinds]").forEach(
+  document.querySelectorAll("[data-picks],[data-uses],[data-calendar]").forEach(
     el => el.innerHTML = `<p class="empty">データを読み込めませんでした。</p>`);
 });

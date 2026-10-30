@@ -55,7 +55,6 @@ section{padding:56px 0 0}
 .cat-h{display:flex;align-items:center;gap:10px;margin:0 0 4px}
 .cat-h .ic{color:var(--accent)}
 .cat-h h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.3rem;letter-spacing:.04em;margin:0}
-.cat-h h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em;margin:0}
 .cat-h .en{font-size:.64rem;letter-spacing:.2em;color:var(--faint)}
 .cat-h .n{margin-left:auto;font-size:.68rem;letter-spacing:.12em;color:var(--faint)}
 .cat-rule{height:1px;background:var(--line);margin:0 0 22px}
@@ -131,26 +130,6 @@ section{padding:56px 0 0}
 .month li .w{color:var(--muted);font-size:.78rem}
 .month.none .mn{color:var(--faint)}
 
-/* カテゴリ別 */
-.rows{display:grid;grid-template-columns:1fr;gap:0}
-.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline;
-  padding:9px 0;border-bottom:1px solid var(--line)}
-.row:first-child{border-top:1px solid var(--line)}
-.row .nm{font-size:.92rem;line-height:1.6}
-.row .nm .code{font-size:.68rem;letter-spacing:.08em;color:var(--faint);margin-left:7px;
-  font-variant-numeric:tabular-nums;white-space:nowrap}
-.row .nm .w{display:block;font-size:.79rem;color:var(--accent)}
-.row .nm .cd{display:block;font-size:.76rem;color:var(--faint)}
-.row .rt{text-align:right;font-size:.74rem;color:var(--muted);letter-spacing:.04em;
-  font-variant-numeric:tabular-nums;white-space:nowrap}
-.row .rt .v{display:block;color:var(--ink);font-size:.82rem}
-@media (max-width:559px){
-  /* 幅が狭いと社名と金額の二段組みが潰れるので、縦に積む */
-  .row{grid-template-columns:1fr;gap:2px}
-  .row .rt{text-align:left;white-space:normal}
-  .row .rt .v{display:inline;margin-right:10px}
-}
-.kind-h{margin-top:30px}
 
 /* 読むときの注意。ふだんは一行に畳んでおく */
 .caution{background:var(--card);border:1px solid var(--line);border-radius:14px}

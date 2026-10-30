@@ -307,6 +307,8 @@ SLUGS = """
 """
 SITE = "https://www.kabuyutai.com/kobetu/{}.html"
 
+# 優待カテゴリの言葉づかい。ページでは各銘柄のアイコンを選ぶのに使う。
+# 以前はこの順でカテゴリ別の節を出していたが、ジャンル別と紛らわしいので節は外した。
 CAT_ORDER = [
     "食事券・サービス券",
     "自社製品",
@@ -484,7 +486,6 @@ def main():
         "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。"
                 "更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
         "updated": date.today().isoformat(),
-        "catOrder": CAT_ORDER,
         "uses": uses,
         "months": MONTHS,
         "items": items,
