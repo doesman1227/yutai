@@ -317,6 +317,23 @@ CAT_ORDER = [
 ]
 MONTHS = [f"{m}月" for m in range(1, 13)]
 
+# 暮らしのどこに効くか。CAT_ORDER が「もらえる物の形」で分けるのに対して、
+# こちらは「生活のどの場面で使うか」で分ける。同じ銘柄は一つの領域にだけ置く。
+# ベルーナのように通販も宿泊もゴルフもあるものは、主に何に使うかで決めた。
+# 区切りは | で、順番は 領域名 | 英字 | ひと言 | 証券コードをカンマ区切り
+# 振り分けの根拠は「楽しい株主優待＆配当」の銘柄ページに書かれている優待内容。
+USES = """
+外食と出前|EATING OUT|うなぎ・ふぐ・たこ焼き・ステーキ・ラーメン・居酒屋・カフェ。宅配の寿司も。|2752,3053,3063,3082,3196,3372,3387,3395,3474,3543,3557,3561,6082,7127,7918,8207,9979
+食卓|TABLE|缶詰・きのこ・かまぼこ・漬物・お米・お肉・お菓子・新茶・りんごジュース・日本酒・調味料。|559A,1301,1375,1780,1965,2198,2222,2267,2493,2897,2904,2935,2937,3003,3199,3539,3987,5301,5616,6820,6942,7327,7384,7885,8346,9955
+家のなか|HOUSEHOLD|歯みがき・タオル・寝具・磁器・文具・防災グッズ・ヘアケア。家事を頼む券も。|2722,2735,2796,3134,3169,6630,7840,7975,8285,9215,9251
+着るもの|CLOTHES|靴下・シャツ・スーツ・メガネ・着物。|2668,3046,3320,3415,3612,6186,7416,8013,8029,8214
+買い物|SHOPPING|家電量販店・ホームセンター・スーパー・通販で使えるもの。|2730,3048,3191,3222,7513,8267,9997
+通信とサブスク|SUBSCRIPTIONS|携帯の回線・動画・電子書籍・学び・天気・乗換案内・家計簿。|264A,299A,3167,3641,3710,4376,4755,4825,5025,6182,6580,9418
+おふろと旅|BATH & TRAVEL|温泉・スーパー銭湯・熱海の宿・ホテル。|2340,3291,3479,3521,5261,8841,8876
+遊び|FUN|遊園地・映画・ゲームセンター・カラオケ・ジム・工場見学。|2404,2928,4661,6819,7267,8136,9166,9633
+なんにでも|ANYTHING|QUOカード・デジタルギフト・総合カタログ・優待ポイント。使い道を選ばないもの。|545A,1848,3036,3154,3645,3939,3943,4765,5949,6089,6286,6306,7196,7272,7277,7337,7347,7388,7539,7613,8566,8783,8881,9160,9347,9432,9433,9436
+"""
+
 
 def parse(block):
     items = []
@@ -360,11 +377,34 @@ def main():
     if nolink:
         raise SystemExit(f"リンク先が未登録: {nolink}")
 
+    uses = []
+    for line in USES.strip().splitlines():
+        name, en, desc, codes = line.split("|")
+        codes = [c.strip() for c in codes.split(",") if c.strip()]
+        uses.append({"name": name, "en": en, "desc": desc, "n": len(codes)})
+        for it in items:
+            if it["code"] in codes:
+                it["use"] = name
+
+    seen = [c for u in USES.strip().splitlines() for c in u.split("|")[3].split(",")]
+    dup = {c for c in seen if seen.count(c) > 1}
+    if dup:
+        raise SystemExit(f"USES で二重に置かれたコードがある: {sorted(dup)}")
+
+    nouse = [i["code"] for i in items if "use" not in i]
+    if nouse:
+        raise SystemExit(f"暮らしの領域が未登録: {nouse}")
+
+    ghost = [c for c in seen if c not in {i["code"] for i in items}]
+    if ghost:
+        raise SystemExit(f"USES に一覧外のコードがある: {ghost}")
+
     data = {
         "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。"
                 "更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
         "updated": date.today().isoformat(),
         "catOrder": CAT_ORDER,
+        "uses": uses,
         "months": MONTHS,
         "items": items,
     }
