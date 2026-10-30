@@ -353,7 +353,7 @@ const USE_ICONS = {
 };
 
 function useCard(u, list){
-  const rows = u.subs.map(name => {
+  const rows = (u.subs || []).map(name => {
     const got = list.filter(it => it.sub === name);
     if (!got.length) return "";
     const names = got.map(it => `<span class="un">${nameLink(it)}</span>`).join("");
@@ -452,7 +452,9 @@ const openCaution = () => {
 addEventListener("hashchange", openCaution);
 openCaution();
 
-fetch("items.json").then(r => r.json()).then(render).catch(() => {
+// 一度来た人のブラウザには古い items.json が残っている。ページだけ新しくなると
+// 形が噛み合わず全部が読み込み失敗になるので、毎回サーバーに確かめさせる。
+fetch("items.json", {cache: "no-cache"}).then(r => r.json()).then(render).catch(() => {
   document.querySelectorAll("[data-picks],[data-uses],[data-calendar],[data-kinds]").forEach(
     el => el.innerHTML = `<p class="empty">データを読み込めませんでした。</p>`);
 });
