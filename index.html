@@ -9,23 +9,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* 生成りの紙とテラコッタ。黒と白は使わず、どの色にも茶を含ませている */
   :root{
-    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
-    --line:#e5e2db; --card:#f3f1ec; --accent:#8a6a3f;
+    --bg:#fdf8f1; --ink:#2a1d12; --muted:#7a6553; --faint:#b3a08c;
+    --line:#ebdecd; --card:#f7eddf; --accent:#9c5a22;
+    --wash:rgba(196,106,38,.13);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
-      --line:#262421; --card:#181614; --accent:#c9a46a;
+      --bg:#17110c; --ink:#f4eade; --muted:#a08b76; --faint:#6a5848;
+      --line:#2e241b; --card:#20180f; --accent:#e2a765;
+      --wash:rgba(226,167,101,.10);
     }
   }
   :root[data-theme="dark"]{
-    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
-    --line:#262421; --card:#181614; --accent:#c9a46a;
+    --bg:#17110c; --ink:#f4eade; --muted:#a08b76; --faint:#6a5848;
+    --line:#2e241b; --card:#20180f; --accent:#e2a765;
+    --wash:rgba(226,167,101,.10);
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
-    font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+  /* 地色は html に置く。そうしないと body の背景が canvas に持ち上がり、
+     下のにじみの位置が本文の箱からずれる */
+  html{background:var(--bg)}
+  /* 見出しのうしろに暖色のにじみを一枚。読み進めると消える薄さで敷く */
+  body{margin:0;color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;
+    background:radial-gradient(120% 420px at 50% 0,var(--wash),transparent 72%) no-repeat}
   a{color:inherit}
   .wrap{max-width:60rem;margin:0 auto;padding:0 16px}
   @media (min-width:640px){.wrap{padding:0 28px}}
