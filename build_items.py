@@ -17,7 +17,9 @@
 誰でも見られる公開ページで、証券コードから機械的に組み立てている。
 """
 
+import hashlib
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -342,6 +344,7 @@ WANTS = """
 8200|リンガーハット|食事券・サービス券|2750|2月,8月|5月,11月|リンガーハットで使える優待ポイント|ちゃんぽんと皿うどんが食べられる。|外食と出前|ちゃんぽん|ringerhut
 """
 
+ASSETS = ["style.css", "app.js"]
 MONTHS = [f"{m}月" for m in range(1, 13)]
 
 # 暮らしのどこに効くか。CAT_ORDER が「もらえる物の形」で分けるのに対して、
@@ -449,6 +452,25 @@ def parse(block):
     return items
 
 
+def stamp_assets(here):
+    """style.css と app.js の URL に中身のハッシュを付ける。
+
+    一度来た人のブラウザには前の app.js が残っている。ページとデータだけ新しくなると
+    古いコードが新しい形の items.json を読むことになり、節がまるごと出なくなる。
+    中身が変わればURLも変わるようにして、取り違えが起きないようにする。
+    """
+    tag = hashlib.sha256(b"".join((here / f).read_bytes() for f in ASSETS)).hexdigest()[:8]
+    touched = []
+    for page in here.glob("*.html"):
+        t = u = page.read_text(encoding="utf-8")
+        for f in ASSETS:
+            u = re.sub(rf'({re.escape(f)})(\?v=[0-9a-f]+)?"', rf'\1?v={tag}"', u)
+        if u != t:
+            page.write_text(u, encoding="utf-8")
+            touched.append(page.name)
+    return f"共通ファイルの版を {tag} にした" + (f"（{'・'.join(touched)}）" if touched else "（変更なし）")
+
+
 def main():
     items = parse(ROWS)
     slugs = dict(l.split("|") for l in SLUGS.strip().splitlines())
@@ -551,6 +573,7 @@ def main():
     out = Path(__file__).with_name("items.json")
     out.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{len(items)}件を {out.name} に書き出した")
+    print(stamp_assets(Path(__file__).parent))
 
 
 if __name__ == "__main__":
