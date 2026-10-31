@@ -80,6 +80,7 @@ function wantCard(w){
       <span class="ttl"><b>${nameLink(w)}</b><span class="code">${esc(w.code)}</span>
         <span class="what">${esc(w.note)}</span></span>
     </div>
+    ${w.memo ? `<p class="memo">${esc(w.memo)}</p>` : ""}
     <div class="meta">${meta}</div>
   </div>`;
 }
