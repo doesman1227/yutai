@@ -322,19 +322,22 @@ CAT_ORDER = [
 # 本人の見立てなので持ってこない。保有株数の欄も、買う規模の話なので出さない。
 # 中身は「楽しい株主優待＆配当」の銘柄ページで裏を取ったもの。SFPホールディングスは
 # 向こうに載っていないので、手元の記録のまま書いてページ名を空にしてある。
+# 暮らしの領域はジャンル別の節と同じ言葉を使う。細目はそこに無い言葉でもよい
+# （ちゃんぽんのように、持っている銘柄には無いもの）。金券は暮らしのどこにも
+# 効かないので、領域も細目も空にしておく。
 # 区切りは | で、順番は
-# コード | 企業名 | 優待カテゴリ | 優待価値 | 権利確定月 | 贈呈月 | 中身 | ページ名
+# コード | 企業名 | 優待カテゴリ | 優待価値 | 権利確定月 | 贈呈月 | 中身 | 領域 | 細目 | ページ名
 WANTS = """
-2157|コシダカホールディングス|食事券・サービス券|2000|8月|11月|カラオケまねきねこで使える割引券|koshidakaholdings
-3178|チムニー|食事券・サービス券|6000|3月,9月|6月,12月|はなの舞などグループ店の食事割引券|chimney
-3198|SFPホールディングス|食事券・サービス券|8000|2月,8月|5月,11月|味噌煮込みうどんや磯丸水産で使える食事券|
-3418|バルニバービ|食事券・サービス券|3000|7月|10月|グループ店の食事割引券と、宿泊券が当たる抽選|balnibarbi
-6339|新東工業|QUOカード・ギフト券|1000|9月|12月|QUOカード|sinto
-7294|ヨロズ|QUOカード・ギフト券|1000|3月|6月|QUOカードかカタログギフト|yorozu-corp
-7792|コラントッテ|その他|5000|9月|12月|自社ECサイトで使える買い物割引クーポン|colantotte
-7893|プロネクサス|QUOカード・ギフト券|500|3月|6月|QUOカード|pronexus
-8081|カナデン|QUOカード・ギフト券|1000|3月,9月|6月,12月|QUOカード|kanaden
-8200|リンガーハット|食事券・サービス券|2750|2月,8月|5月,11月|リンガーハットで使える優待ポイント|ringerhut
+2157|コシダカホールディングス|食事券・サービス券|2000|8月|11月|カラオケまねきねこで使える割引券|遊び|カラオケ|koshidakaholdings
+3178|チムニー|食事券・サービス券|6000|3月,9月|6月,12月|はなの舞などグループ店の食事割引券|外食と出前|居酒屋|chimney
+3198|SFPホールディングス|食事券・サービス券|8000|2月,8月|5月,11月|味噌煮込みうどんや磯丸水産で使える食事券|外食と出前|居酒屋|
+3418|バルニバービ|食事券・サービス券|3000|7月|10月|グループ店の食事割引券と、宿泊券が当たる抽選|外食と出前|いろいろな店|balnibarbi
+6339|新東工業|QUOカード・ギフト券|1000|9月|12月|QUOカード|||sinto
+7294|ヨロズ|QUOカード・ギフト券|1000|3月|6月|QUOカードかカタログギフト|||yorozu-corp
+7792|コラントッテ|その他|5000|9月|12月|自社ECサイトで使える買い物割引クーポン|家のなか|健康グッズ|colantotte
+7893|プロネクサス|QUOカード・ギフト券|500|3月|6月|QUOカード|||pronexus
+8081|カナデン|QUOカード・ギフト券|1000|3月,9月|6月,12月|QUOカード|||kanaden
+8200|リンガーハット|食事券・サービス券|2750|2月,8月|5月,11月|リンガーハットで使える優待ポイント|外食と出前|ちゃんぽん|ringerhut
 """
 
 MONTHS = [f"{m}月" for m in range(1, 13)]
@@ -504,12 +507,14 @@ def main():
 
     wants = []
     for line in WANTS.strip().splitlines():
-        code, name, cat, value, fix, arrive, note, slug = line.split("|")
+        code, name, cat, value, fix, arrive, note, use, sub, slug = line.split("|")
         w = {"code": code, "name": name, "cat": cat,
              "value": int(value) if value.strip() else None,
              "fix": [m for m in fix.split(",") if m.strip()],
              "arrive": [m for m in arrive.split(",") if m.strip()],
              "note": note}
+        if use.strip():
+            w["use"], w["sub"] = use.strip(), sub.strip()
         if slug.strip():
             w["url"] = SITE.format(slug.strip())
         wants.append(w)
@@ -518,6 +523,15 @@ def main():
     held = [w["code"] for w in wants if w["code"] in by_code]
     if held:
         raise SystemExit(f"もう持っている銘柄が WANTS にある: {held}")
+
+    names = {u["name"] for u in uses}
+    strayu = [w["code"] for w in wants if w.get("use") and w["use"] not in names]
+    if strayu:
+        raise SystemExit(f"WANTS の領域がジャンル別に無い: {strayu}")
+
+    halfu = [w["code"] for w in wants if bool(w.get("use")) != bool(w.get("sub"))]
+    if halfu:
+        raise SystemExit(f"WANTS の領域と細目は両方書くか両方空にする: {halfu}")
 
     badw = [w["code"] for w in wants if any(m not in MONTHS for m in w["fix"] + w["arrive"])]
     if badw:

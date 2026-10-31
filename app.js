@@ -15,8 +15,19 @@ const ICONS = {
 };
 const icon = (cat, cls) => `<svg class="ic ${cls}" aria-hidden="true"><use href="#ic-${ICONS[cat] || "star"}"/></svg>`;
 
+// 今月から数えて、その月が次に来るまでの近さ。0 は今月。月の無いものは最後へ。
+const soon = ms => {
+  const cur = new Date().getMonth() + 1;
+  const ns = ms.map(m => (parseInt(m, 10) - cur + 12) % 12);
+  return ns.length ? Math.min(...ns) : 99;
+};
+
+// 細目はトップのジャンル別へ送る。二つのページを行き来できるようにしておく。
+const subTag = (it, home) => it.sub
+  ? `<a class="gl" href="${home}#genre">${esc(it.sub)}</a>` : "";
+
 function pickCard(it){
-  const meta = [
+  const meta = subTag(it, "./") + [
     it.fix.length ? "権利確定 " + it.fix.join("・") : "",
     it.arrive.length ? "到着 " + it.arrive.join("・") : "",
     it.value ? yen(it.value) + "相当" : "",
@@ -39,7 +50,7 @@ const USE_ICONS = {
   "買い物":"bag", "通信とサブスク":"wifi", "おふろと旅":"bath", "遊び":"wheel",
 };
 
-function useCard(u, list){
+function useCard(u, list, wanted){
   const rows = (u.subs || []).map(name => {
     const got = list.filter(it => it.sub === name);
     if (!got.length) return "";
@@ -50,7 +61,7 @@ function useCard(u, list){
     <div class="uh">
       <span class="badge"><svg class="ic" aria-hidden="true"><use href="#ic-${USE_ICONS[u.name] || "shop"}"/></svg></span>
       <span class="ut"><b>${esc(u.name)}</b><span class="uen">${esc(u.en)}</span></span>
-      <span class="n">${list.length}件</span>
+      <span class="n">${list.length}件${wanted ? `<span class="wn">欲しい${wanted}</span>` : ""}</span>
     </div>
     <dl class="subs">${rows}</dl>
   </div>`;
@@ -58,7 +69,7 @@ function useCard(u, list){
 
 // 欲しい優待のカード。まだ持っていないので、到着ではなく贈呈の月を書く。
 function wantCard(w){
-  const meta = [
+  const meta = subTag(w, "./") + [
     w.fix.length ? "権利確定 " + w.fix.join("・") : "",
     w.arrive.length ? "贈呈 " + w.arrive.join("・") : "",
     w.value ? yen(w.value) + "相当" : "",
@@ -92,13 +103,15 @@ function render(data){
   const byName = (a, b) => a.code.localeCompare(b.code);
 
   // お気に入り優待
-  const picks = items.filter(it => it.memo);
+  const picks = items.filter(it => it.memo)
+    .sort((a, b) => soon(a.arrive) - soon(b.arrive) || a.code.localeCompare(b.code));
   const pickBox = document.querySelector("[data-picks]");
   if (pickBox) pickBox.innerHTML = picks.length ? picks.map(pickCard).join("")
     : `<p class="empty">まだありません。</p>`;
 
   // 欲しい優待
-  const wants = data.wants || [];
+  const wants = (data.wants || []).slice()
+    .sort((a, b) => soon(a.fix) - soon(b.fix) || a.code.localeCompare(b.code));
   const wantBox = document.querySelector("[data-wants]");
   if (wantBox) wantBox.innerHTML = wants.length ? wants.map(wantCard).join("")
     : `<p class="empty">まだありません。</p>`;
@@ -108,7 +121,8 @@ function render(data){
   const placed = items.filter(it => it.use);
   const useBox = document.querySelector("[data-uses]");
   if (useBox) useBox.innerHTML = uses.length
-    ? uses.map(u => useCard(u, placed.filter(it => it.use === u.name).sort(byName))).join("")
+    ? uses.map(u => useCard(u, placed.filter(it => it.use === u.name).sort(byName),
+        wants.filter(w => w.use === u.name).length)).join("")
     : `<p class="empty">まだありません。</p>`;
 
   // 残りがどこへ行ったのかは、黙って消すより書いておく

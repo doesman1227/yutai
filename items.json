@@ -149,6 +149,8 @@
         "11月"
       ],
       "note": "カラオケまねきねこで使える割引券",
+      "use": "遊び",
+      "sub": "カラオケ",
       "url": "https://www.kabuyutai.com/kobetu/koshidakaholdings.html"
     },
     {
@@ -165,6 +167,8 @@
         "12月"
       ],
       "note": "はなの舞などグループ店の食事割引券",
+      "use": "外食と出前",
+      "sub": "居酒屋",
       "url": "https://www.kabuyutai.com/kobetu/chimney.html"
     },
     {
@@ -180,7 +184,9 @@
         "5月",
         "11月"
       ],
-      "note": "味噌煮込みうどんや磯丸水産で使える食事券"
+      "note": "味噌煮込みうどんや磯丸水産で使える食事券",
+      "use": "外食と出前",
+      "sub": "居酒屋"
     },
     {
       "code": "3418",
@@ -194,6 +200,8 @@
         "10月"
       ],
       "note": "グループ店の食事割引券と、宿泊券が当たる抽選",
+      "use": "外食と出前",
+      "sub": "いろいろな店",
       "url": "https://www.kabuyutai.com/kobetu/balnibarbi.html"
     },
     {
@@ -236,6 +244,8 @@
         "12月"
       ],
       "note": "自社ECサイトで使える買い物割引クーポン",
+      "use": "家のなか",
+      "sub": "健康グッズ",
       "url": "https://www.kabuyutai.com/kobetu/colantotte.html"
     },
     {
@@ -282,6 +292,8 @@
         "11月"
       ],
       "note": "リンガーハットで使える優待ポイント",
+      "use": "外食と出前",
+      "sub": "ちゃんぽん",
       "url": "https://www.kabuyutai.com/kobetu/ringerhut.html"
     }
   ],
