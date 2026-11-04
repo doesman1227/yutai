@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-10-31",
+  "updated": "2026-11-04",
   "uses": [
     {
       "name": "外食と出前",
@@ -138,6 +138,23 @@
   ],
   "wants": [
     {
+      "code": "1383",
+      "name": "ベルグアース",
+      "cat": "その他",
+      "value": null,
+      "fix": [
+        "4月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "QUOカードから野菜苗・トマト・メロンまで、八つから一つ選ぶ",
+      "memo": "メロン二玉を選ぶと五千円相当になる。",
+      "use": "食卓",
+      "sub": "野菜と果物",
+      "url": "https://www.kabuyutai.com/kobetu/bergearth.html"
+    },
+    {
       "code": "2157",
       "name": "コシダカホールディングス",
       "cat": "食事券・サービス券",
@@ -153,6 +170,116 @@
       "use": "遊び",
       "sub": "カラオケ",
       "url": "https://www.kabuyutai.com/kobetu/koshidakaholdings.html"
+    },
+    {
+      "code": "2531",
+      "name": "宝ホールディングス",
+      "cat": "自社製品",
+      "value": 1000,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "7月"
+      ],
+      "note": "宝酒造などグループ会社の商品詰め合わせ",
+      "memo": "",
+      "use": "食卓",
+      "sub": "お酒",
+      "url": "https://www.kabuyutai.com/kobetu/takara.html"
+    },
+    {
+      "code": "2594",
+      "name": "キーコーヒー",
+      "cat": "自社製品",
+      "value": 1200,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "5月",
+        "11月"
+      ],
+      "note": "自社製品の詰め合わせ",
+      "memo": "コーヒーが年に二回届く。",
+      "use": "食卓",
+      "sub": "コーヒー",
+      "url": "https://www.kabuyutai.com/kobetu/keycoffee.html"
+    },
+    {
+      "code": "2597",
+      "name": "ユニカフェ",
+      "cat": "自社製品",
+      "value": 2000,
+      "fix": [
+        "12月"
+      ],
+      "arrive": [
+        "2月"
+      ],
+      "note": "自社コーヒー製品の詰め合わせ",
+      "memo": "コーヒーが届く。",
+      "use": "食卓",
+      "sub": "コーヒー",
+      "url": "https://www.kabuyutai.com/kobetu/unicafe.html"
+    },
+    {
+      "code": "2705",
+      "name": "大戸屋ホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 4000,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "大戸屋などで使える優待ポイントカード",
+      "memo": "定食が食べられる。年に二回もらえる。",
+      "use": "外食と出前",
+      "sub": "定食",
+      "url": "https://www.kabuyutai.com/kobetu/ootoya.html"
+    },
+    {
+      "code": "2798",
+      "name": "ワイズテーブルコーポレーション",
+      "cat": "食事券・サービス券",
+      "value": 5000,
+      "fix": [
+        "2月",
+        "8月"
+      ],
+      "arrive": [
+        "5月",
+        "11月"
+      ],
+      "note": "XEXなど直営店で使える食事割引券",
+      "memo": "XEXで食事ができる。会員証ももらえる。",
+      "use": "外食と出前",
+      "sub": "レストラン",
+      "url": "https://www.kabuyutai.com/kobetu/ystable.html"
+    },
+    {
+      "code": "3091",
+      "name": "ブロンコビリー",
+      "cat": "食事券・サービス券",
+      "value": 2000,
+      "fix": [
+        "6月",
+        "12月"
+      ],
+      "arrive": [
+        "9月",
+        "3月"
+      ],
+      "note": "ブロンコビリーで使える食事割引券",
+      "memo": "炭焼きのステーキが食べられる。",
+      "use": "外食と出前",
+      "sub": "ステーキ",
+      "url": "https://www.kabuyutai.com/kobetu/bronco.html"
     },
     {
       "code": "3178",
@@ -174,6 +301,25 @@
       "url": "https://www.kabuyutai.com/kobetu/chimney.html"
     },
     {
+      "code": "3197",
+      "name": "すかいらーくホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 2000,
+      "fix": [
+        "6月",
+        "12月"
+      ],
+      "arrive": [
+        "9月",
+        "3月"
+      ],
+      "note": "ガストなどグループ店で使える食事割引券",
+      "memo": "ガストでもしゃぶ葉でも使える。年に二回届く。",
+      "use": "外食と出前",
+      "sub": "いろいろな店",
+      "url": "https://www.kabuyutai.com/kobetu/skylark.html"
+    },
+    {
       "code": "3198",
       "name": "SFPホールディングス",
       "cat": "食事券・サービス券",
@@ -192,6 +338,25 @@
       "sub": "居酒屋"
     },
     {
+      "code": "3397",
+      "name": "トリドールホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 3000,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "丸亀製麺などグループ店で使える食事割引カード",
+      "memo": "丸亀製麺でうどんが食べられる。",
+      "use": "外食と出前",
+      "sub": "うどん",
+      "url": "https://www.kabuyutai.com/kobetu/toridoll.html"
+    },
+    {
       "code": "3418",
       "name": "バルニバービ",
       "cat": "食事券・サービス券",
@@ -207,6 +372,25 @@
       "use": "外食と出前",
       "sub": "いろいろな店",
       "url": "https://www.kabuyutai.com/kobetu/balnibarbi.html"
+    },
+    {
+      "code": "3994",
+      "name": "マネーフォワード",
+      "cat": "食事券・サービス券",
+      "value": 3240,
+      "fix": [
+        "5月",
+        "11月"
+      ],
+      "arrive": [
+        "7月",
+        "2月"
+      ],
+      "note": "マネーフォワードMEスタンダードコースの6か月無料クーポン",
+      "memo": "家計簿アプリが半年ぶん無料で使える。半年以上持っている必要がある。",
+      "use": "通信とサブスク",
+      "sub": "家計簿",
+      "url": "https://www.kabuyutai.com/kobetu/moneyforward.html"
     },
     {
       "code": "6339",
@@ -305,6 +489,55 @@
       "use": "外食と出前",
       "sub": "ちゃんぽん",
       "url": "https://www.kabuyutai.com/kobetu/ringerhut.html"
+    },
+    {
+      "code": "9023",
+      "name": "東京地下鉄",
+      "cat": "その他",
+      "value": null,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "12月"
+      ],
+      "note": "東京メトロ全線で使える優待乗車証（200株から）",
+      "memo": "地下鉄の回数券が年に二回もらえる。",
+      "url": "https://www.kabuyutai.com/kobetu/tokyometro.html"
+    },
+    {
+      "code": "9853",
+      "name": "銀座ルノアール",
+      "cat": "食事券・サービス券",
+      "value": 1000,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "喫茶ルノアールなどで使える食事割引券",
+      "memo": "喫茶ルノアールでゆっくりできる。",
+      "use": "外食と出前",
+      "sub": "カフェ",
+      "url": "https://www.kabuyutai.com/kobetu/ginza-renoir.html"
+    },
+    {
+      "code": "9948",
+      "name": "アークス",
+      "cat": "QUOカード・ギフト券",
+      "value": 3000,
+      "fix": [
+        "2月"
+      ],
+      "arrive": [],
+      "note": "VJAギフトカードかスーパーの買物券など、四つから一つ選ぶ",
+      "memo": "青森県産のりんごやアップルジュースも選べる。継続保有一年以上が条件。",
+      "use": "買い物",
+      "sub": "スーパー",
+      "url": "https://www.kabuyutai.com/kobetu/arcs-g.html"
     }
   ],
   "items": [
