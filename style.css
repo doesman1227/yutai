@@ -95,6 +95,10 @@ section{padding:56px 0 0}
 .use .uh .n{margin-left:auto;font-size:.68rem;letter-spacing:.12em;color:var(--faint);flex:0 0 auto}
 /* 持っている件数のうしろに、欲しい件数。無い領域には出さない */
 .use .uh .wn{color:var(--accent);margin-left:7px}
+/* 持っている件数が無いときは、欲しい件数だけが右端に来る */
+.use .uh .wn.solo{margin-left:0}
+.use .none{margin:13px 0 0;padding:12px 0 0;border-top:1px solid var(--line);
+  font-size:.8rem;color:var(--muted)}
 /* 細目は左の列に揃える。.sub を display:contents にして、dt と dd を
    そのまま dl のグリッドに流し込むと、カードごとに左の列幅が揃う */
 .use .subs{margin:13px 0 0;padding:12px 0 0;border-top:1px solid var(--line);

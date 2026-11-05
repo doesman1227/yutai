@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "uses": [
     {
       "name": "外食と出前",
@@ -120,6 +120,14 @@
         "工場見学"
       ],
       "n": 10
+    },
+    {
+      "name": "乗り物",
+      "en": "GETTING AROUND",
+      "subs": [
+        "電車"
+      ],
+      "n": 0
     }
   ],
   "months": [
@@ -505,6 +513,8 @@
       ],
       "note": "東京メトロ全線で使える優待乗車証（200株から）",
       "memo": "地下鉄の回数券が年に二回もらえる。",
+      "use": "乗り物",
+      "sub": "電車",
       "url": "https://www.kabuyutai.com/kobetu/tokyometro.html"
     },
     {

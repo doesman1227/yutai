@@ -48,6 +48,7 @@ function pickCard(it){
 const USE_ICONS = {
   "外食と出前":"shop", "食卓":"meal", "家のなか":"home", "着るもの":"shirt",
   "買い物":"bag", "通信とサブスク":"wifi", "おふろと旅":"bath", "遊び":"wheel",
+  "乗り物":"train",
 };
 
 function useCard(u, list, wanted){
@@ -57,13 +58,16 @@ function useCard(u, list, wanted){
     const names = got.map(it => `<span class="un">${nameLink(it)}</span>`).join("");
     return `<div class="sub"><dt>${esc(name)}</dt><dd>${names}</dd></div>`;
   }).join("");
+  // 持っている銘柄がまだ無い領域は、空の表のかわりにそう書く
+  const n = list.length ? `${list.length}件` : "";
+  const wn = wanted ? `<span class="wn${n ? "" : " solo"}">欲しい${wanted}</span>` : "";
   return `<div class="use">
     <div class="uh">
       <span class="badge"><svg class="ic" aria-hidden="true"><use href="#ic-${USE_ICONS[u.name] || "shop"}"/></svg></span>
       <span class="ut"><b>${esc(u.name)}</b><span class="uen">${esc(u.en)}</span></span>
-      <span class="n">${list.length}件${wanted ? `<span class="wn">欲しい${wanted}</span>` : ""}</span>
+      <span class="n">${n}${wn}</span>
     </div>
-    <dl class="subs">${rows}</dl>
+    ${rows ? `<dl class="subs">${rows}</dl>` : `<p class="none">まだ持っていません。</p>`}
   </div>`;
 }
 
