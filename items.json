@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "uses": [
     {
       "name": "外食と出前",
@@ -347,6 +347,23 @@
       "url": "https://www.kabuyutai.com/kobetu/moneyforward.html"
     },
     {
+      "code": "6249",
+      "name": "ゲームカードホールディングス",
+      "cat": "カタログギフト",
+      "value": 2500,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "カタログか専用サイトで選ぶ、飲食料品が中心のギフト",
+      "memo": "一年以上持つと三千円、三年以上で四千円に増える。",
+      "use": "食卓",
+      "sub": "グルメカタログ",
+      "url": "https://www.kabuyutai.com/kobetu/gamecard-joyco.html"
+    },
+    {
       "code": "9023",
       "name": "東京地下鉄",
       "cat": "その他",
@@ -359,8 +376,8 @@
         "6月",
         "12月"
       ],
-      "note": "東京メトロ全線で使える優待乗車証（200株から）",
-      "memo": "地下鉄の回数券が年に二回もらえる。",
+      "note": "東京メトロ全線で使える優待乗車証（200株で回数券三枚、一万株で全線定期券）",
+      "memo": "目指すのは一万株。そこまで集めると、回数券ではなく全線定期券が年に二回になる。",
       "use": "乗り物",
       "sub": "電車",
       "url": "https://www.kabuyutai.com/kobetu/tokyometro.html"
