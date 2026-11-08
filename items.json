@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-06",
+  "updated": "2026-11-08",
   "uses": [
     {
       "name": "外食と出前",
@@ -269,6 +269,23 @@
       "use": "外食と出前",
       "sub": "レストラン",
       "url": "https://www.kabuyutai.com/kobetu/ystable.html"
+    },
+    {
+      "code": "2938",
+      "name": "オカムラ食品工業",
+      "cat": "自社製品",
+      "value": 3000,
+      "fix": [
+        "6月"
+      ],
+      "arrive": [
+        "8月"
+      ],
+      "note": "自社で養殖・加工した食品のセット",
+      "memo": "過去には青森サーモンの刺身や切り身が届いている。",
+      "use": "食卓",
+      "sub": "魚とかまぼこ",
+      "url": "https://www.kabuyutai.com/kobetu/okamurashokuhin.html"
     },
     {
       "code": "3091",
