@@ -400,6 +400,44 @@
       "url": "https://www.kabuyutai.com/kobetu/tokyometro.html"
     },
     {
+      "code": "9404",
+      "name": "日本テレビホールディングス",
+      "cat": "食事券・サービス券",
+      "value": 8724,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "11月"
+      ],
+      "note": "Huluとトルチャが一か月ずつ、GIANTS TVのクーポン、GLADDの買物割引券",
+      "memo": "三月の分にはティップネスの一回券も付く。三百株なら笑点の収録観覧に応募できる。",
+      "use": "通信とサブスク",
+      "sub": "動画と本",
+      "url": "https://www.kabuyutai.com/kobetu/ntvhd.html"
+    },
+    {
+      "code": "9603",
+      "name": "エイチ・アイ・エス",
+      "cat": "食事券・サービス券",
+      "value": 1000,
+      "fix": [
+        "4月",
+        "10月"
+      ],
+      "arrive": [
+        "6月",
+        "1月"
+      ],
+      "note": "自社グループの宿や飲食店、旅行代金の支払いに使える割引券（一枚千円）",
+      "memo": "三年以上持つと、十月の分に三千円が足される（二〇二九年十月分から）。",
+      "use": "おふろと旅",
+      "sub": "旅行",
+      "url": "https://www.kabuyutai.com/kobetu/his.html"
+    },
+    {
       "code": "9853",
       "name": "銀座ルノアール",
       "cat": "食事券・サービス券",
