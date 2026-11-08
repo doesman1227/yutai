@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "uses": [
     {
       "name": "外食と出前",
@@ -364,6 +364,23 @@
       "url": "https://www.kabuyutai.com/kobetu/moneyforward.html"
     },
     {
+      "code": "4301",
+      "name": "アミューズ",
+      "cat": "その他",
+      "value": null,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "5月"
+      ],
+      "note": "自社制作の舞台への招待や映画のペア鑑賞券など、三つほどから一つ選ぶ",
+      "memo": "三百株だと、ファンクラブやアスマートで使える五千円分のポイントがもらえる。",
+      "use": "遊び",
+      "sub": "舞台",
+      "url": "https://www.kabuyutai.com/kobetu/amuse.html"
+    },
+    {
       "code": "6249",
       "name": "ゲームカードホールディングス",
       "cat": "カタログギフト",
@@ -379,6 +396,42 @@
       "use": "食卓",
       "sub": "グルメカタログ",
       "url": "https://www.kabuyutai.com/kobetu/gamecard-joyco.html"
+    },
+    {
+      "code": "8111",
+      "name": "ゴールドウイン",
+      "cat": "自社製品",
+      "value": null,
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月",
+        "11月"
+      ],
+      "note": "三月は自社商品から一点を選び、九月はGoldwin Online Storeの買物割引クーポン",
+      "memo": "ザ・ノース・フェイスのTシャツやタオルも選べる。九月の割引は百株で一割五分。",
+      "use": "着るもの",
+      "sub": "アウトドアの服",
+      "url": "https://www.kabuyutai.com/kobetu/goldwin.html"
+    },
+    {
+      "code": "8769",
+      "name": "アドバンテッジリスクマネジメント",
+      "cat": "食事券・サービス券",
+      "value": null,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "オンラインプログラム「アドバンテッジ タフネス」の年間無料利用権",
+      "memo": "ストレスチェックと学習プログラムで、こころの調子を整えられる。",
+      "use": "通信とサブスク",
+      "sub": "こころの健康",
+      "url": "https://www.kabuyutai.com/kobetu/armg.html"
     },
     {
       "code": "9023",
@@ -468,6 +521,23 @@
       "use": "買い物",
       "sub": "スーパー",
       "url": "https://www.kabuyutai.com/kobetu/arcs-g.html"
+    },
+    {
+      "code": "9991",
+      "name": "ジェコス",
+      "cat": "その他",
+      "value": 2000,
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "デジタルギフト「giftee Box」か燕三条の金属製品を選ぶ（一年以上の保有が条件）",
+      "memo": "二〇二七年三月の分は厚紙の組立キット建機が付き、歌舞伎座や野球の観戦チケットの抽選にも応募できる。",
+      "use": "家のなか",
+      "sub": "タオルと食器",
+      "url": "https://www.kabuyutai.com/kobetu/gecoss.html"
     }
   ],
   "items": [
