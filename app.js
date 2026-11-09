@@ -89,6 +89,23 @@ function wantCard(w){
   </div>`;
 }
 
+// お気に入りと欲しい優待は、優待カテゴリごとの節に分ける。節の順番は ICONS の
+// 並び（食事券から、暮らしのどこにも効かない金券とその他を後ろへ）。空の節は出さない。
+function catGroups(list, card){
+  return Object.keys(ICONS).map(cat => {
+    const got = list.filter(x => x.cat === cat);
+    if (!got.length) return "";
+    return `<div class="cg">
+      <div class="cgh">
+        <span class="badge">${icon(cat, "")}</span>
+        <h3>${esc(cat)}</h3>
+        <span class="n">${got.length}件</span>
+      </div>
+      <div class="picks">${got.map(card).join("")}</div>
+    </div>`;
+  }).join("");
+}
+
 function monthBlock(month, list, max){
   const w = list.length ? Math.max(4, Math.round(list.length / max * 100)) : 0;
   const items = list.map(it => `<li><span>${icon(it.cat, "mi")}${nameLink(it)}</span>${
@@ -111,14 +128,14 @@ function render(data){
   const picks = items.filter(it => it.memo)
     .sort((a, b) => soon(a.arrive) - soon(b.arrive) || a.code.localeCompare(b.code));
   const pickBox = document.querySelector("[data-picks]");
-  if (pickBox) pickBox.innerHTML = picks.length ? picks.map(pickCard).join("")
+  if (pickBox) pickBox.innerHTML = picks.length ? catGroups(picks, pickCard)
     : `<p class="empty">まだありません。</p>`;
 
   // 欲しい優待
   const wants = (data.wants || []).slice()
     .sort((a, b) => soon(a.fix) - soon(b.fix) || a.code.localeCompare(b.code));
   const wantBox = document.querySelector("[data-wants]");
-  if (wantBox) wantBox.innerHTML = wants.length ? wants.map(wantCard).join("")
+  if (wantBox) wantBox.innerHTML = wants.length ? catGroups(wants, wantCard)
     : `<p class="empty">まだありません。</p>`;
 
   // ジャンル別
