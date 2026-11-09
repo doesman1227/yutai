@@ -38,7 +38,7 @@
         "グルメカタログ",
         "食品いろいろ"
       ],
-      "n": 27
+      "n": 28
     },
     {
       "name": "家のなか",
@@ -91,10 +91,11 @@
         "天気",
         "乗換案内",
         "家計簿",
+        "こころの健康",
         "住まい探し",
         "仕事の道具"
       ],
-      "n": 12
+      "n": 13
     },
     {
       "name": "おふろと旅",
@@ -271,23 +272,6 @@
       "url": "https://www.kabuyutai.com/kobetu/ystable.html"
     },
     {
-      "code": "2938",
-      "name": "オカムラ食品工業",
-      "cat": "自社製品",
-      "value": 3000,
-      "fix": [
-        "6月"
-      ],
-      "arrive": [
-        "8月"
-      ],
-      "note": "自社で養殖・加工した食品のセット",
-      "memo": "過去には青森サーモンの刺身や切り身が届いている。",
-      "use": "食卓",
-      "sub": "魚とかまぼこ",
-      "url": "https://www.kabuyutai.com/kobetu/okamurashokuhin.html"
-    },
-    {
       "code": "3091",
       "name": "ブロンコビリー",
       "cat": "食事券・サービス券",
@@ -415,23 +399,6 @@
       "use": "着るもの",
       "sub": "アウトドアの服",
       "url": "https://www.kabuyutai.com/kobetu/goldwin.html"
-    },
-    {
-      "code": "8769",
-      "name": "アドバンテッジリスクマネジメント",
-      "cat": "食事券・サービス券",
-      "value": null,
-      "fix": [
-        "3月"
-      ],
-      "arrive": [
-        "6月"
-      ],
-      "note": "オンラインプログラム「アドバンテッジ タフネス」の年間無料利用権",
-      "memo": "ストレスチェックと学習プログラムで、こころの調子を整えられる。",
-      "use": "通信とサブスク",
-      "sub": "こころの健康",
-      "url": "https://www.kabuyutai.com/kobetu/armg.html"
     },
     {
       "code": "9023",
@@ -983,6 +950,23 @@
       "url": "https://www.kabuyutai.com/kobetu/stcousair.html",
       "use": "食卓",
       "sub": "調味料"
+    },
+    {
+      "code": "2938",
+      "name": "オカムラ食品工業",
+      "cat": "自社製品",
+      "value": 3000,
+      "cond": "",
+      "fix": [
+        "6月"
+      ],
+      "arrive": [
+        "8月"
+      ],
+      "note": "サーモンなど自社で養殖・加工した食品",
+      "url": "https://www.kabuyutai.com/kobetu/okamurashokuhin.html",
+      "use": "食卓",
+      "sub": "魚とかまぼこ"
     },
     {
       "code": "3003",
@@ -1697,6 +1681,22 @@
       "url": "https://www.kabuyutai.com/kobetu/weathernews.html",
       "use": "通信とサブスク",
       "sub": "天気"
+    },
+    {
+      "code": "4838",
+      "name": "スペースシャワーSKIYAKIホールディングス",
+      "cat": "QUOカード・ギフト券",
+      "value": 500,
+      "cond": "",
+      "fix": [
+        "3月",
+        "9月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "デジタルギフトと音楽ライブの抽選応募",
+      "url": "https://www.kabuyutai.com/kobetu/spaceshower.html"
     },
     {
       "code": "5025",
@@ -2427,6 +2427,23 @@
       ],
       "note": "カタログギフト",
       "url": "https://www.kabuyutai.com/kobetu/r-lease.html"
+    },
+    {
+      "code": "8769",
+      "name": "アドバンテッジリスクマネジメント",
+      "cat": "食事券・サービス券",
+      "value": null,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "6月"
+      ],
+      "note": "メンタルヘルスのオンラインプログラム",
+      "url": "https://www.kabuyutai.com/kobetu/armg.html",
+      "use": "通信とサブスク",
+      "sub": "こころの健康"
     },
     {
       "code": "8783",
