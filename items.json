@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-09",
+  "updated": "2026-11-11",
   "uses": [
     {
       "name": "外食と出前",
@@ -118,9 +118,10 @@
         "カラオケ",
         "ジム",
         "ゴルフ",
-        "工場見学"
+        "工場見学",
+        "舞台"
       ],
-      "n": 10
+      "n": 11
     },
     {
       "name": "乗り物",
@@ -346,23 +347,6 @@
       "use": "通信とサブスク",
       "sub": "家計簿",
       "url": "https://www.kabuyutai.com/kobetu/moneyforward.html"
-    },
-    {
-      "code": "4301",
-      "name": "アミューズ",
-      "cat": "その他",
-      "value": null,
-      "fix": [
-        "3月"
-      ],
-      "arrive": [
-        "5月"
-      ],
-      "note": "自社制作の舞台への招待や映画のペア鑑賞券など、三つほどから一つ選ぶ",
-      "memo": "三百株だと、ファンクラブやアスマートで使える五千円分のポイントがもらえる。",
-      "use": "遊び",
-      "sub": "舞台",
-      "url": "https://www.kabuyutai.com/kobetu/amuse.html"
     },
     {
       "code": "6249",
@@ -1594,6 +1578,23 @@
       "url": "https://www.kabuyutai.com/kobetu/ecomott.html",
       "use": "食卓",
       "sub": "お菓子"
+    },
+    {
+      "code": "4301",
+      "name": "アミューズ",
+      "cat": "その他",
+      "value": null,
+      "cond": "",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [
+        "5月"
+      ],
+      "note": "自社制作の舞台や映画への招待（選択式）",
+      "url": "https://www.kabuyutai.com/kobetu/amuse.html",
+      "use": "遊び",
+      "sub": "舞台"
     },
     {
       "code": "4376",
