@@ -1,6 +1,6 @@
 {
   "note": "公開してよい列だけを持つ。株主番号・取得コスト・保有株数・評価損益・利回りは入れない。更新は build_items.py の ROWS を直してから python3 build_items.py を実行する。",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "uses": [
     {
       "name": "外食と出前",
@@ -38,7 +38,7 @@
         "グルメカタログ",
         "食品いろいろ"
       ],
-      "n": 28
+      "n": 29
     },
     {
       "name": "家のなか",
@@ -271,21 +271,6 @@
       "use": "外食と出前",
       "sub": "レストラン",
       "url": "https://www.kabuyutai.com/kobetu/ystable.html"
-    },
-    {
-      "code": "2801",
-      "name": "キッコーマン",
-      "cat": "自社製品",
-      "value": 1000,
-      "fix": [
-        "3月"
-      ],
-      "arrive": [],
-      "note": "しょうゆ・つゆ・たれ・野菜ジュースなど、自社グループの商品",
-      "memo": "半年以上持つのが条件。五千株まで集めると、自社製造のワイン六千円分も選べる。",
-      "use": "食卓",
-      "sub": "調味料",
-      "url": "https://www.kabuyutai.com/kobetu/kikkoman.html"
     },
     {
       "code": "3091",
@@ -864,6 +849,21 @@
       "url": "https://www.kabuyutai.com/kobetu/pharmarise.html",
       "use": "家のなか",
       "sub": "歯みがき"
+    },
+    {
+      "code": "2801",
+      "name": "キッコーマン",
+      "cat": "自社製品",
+      "value": 1000,
+      "cond": "6か月以上の保有",
+      "fix": [
+        "3月"
+      ],
+      "arrive": [],
+      "note": "しょうゆ・つゆ・たれ・野菜ジュースなど自社グループの商品",
+      "url": "https://www.kabuyutai.com/kobetu/kikkoman.html",
+      "use": "食卓",
+      "sub": "調味料"
     },
     {
       "code": "2897",
